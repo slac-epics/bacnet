@@ -36,7 +36,7 @@ BacNetSubscribeCOVtestServer::~BacNetSubscribeCOVtestServer() {
 	// TODO Auto-generated destructor stub
 }
 
-BacNetDevice *findDevice(sockaddr_in addr, BacNetBVLC *bvlc, BacNetNpdu *npdu, BacNetDevice *dev){
+static BacNetDevice *findDevice(sockaddr_in addr, BacNetBVLC *bvlc, BacNetNpdu *npdu, BacNetDevice *dev){
 
 	uint8_t tempMac[6];
 	memcpy(&tempMac[0], &addr.sin_addr, 4);
