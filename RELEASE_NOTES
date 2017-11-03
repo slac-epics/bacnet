@@ -1,0 +1,8 @@
+R0.8-0.1.0		Marcio Donadio - 2017-11-03
+			- Started from community version R0.8
+			- Removed eclipse hidden files
+			- Removed uneeded log of an old make
+			- Added TID standards for EPICS 3.15
+			- findDevice function in 3 different cpp files needs to
+			  be static
+			- By mdunning: Comment out unneeded hexdump
