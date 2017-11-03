@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 5.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage2">
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<configuration buildProperties="" description="" id="0.2046761957" name="Default" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+			<folderInfo id="0.2046761957." name="/" resourcePath="">
+				<toolChain id="org.eclipse.cdt.build.core.prefbase.toolchain.242638636" name="No ToolChain" resourceTypeBasedDiscovery="false" superClass="org.eclipse.cdt.build.core.prefbase.toolchain">
+					<targetPlatform id="org.eclipse.cdt.build.core.prefbase.toolchain.242638636.1224720327" name=""/>
+					<builder id="org.eclipse.cdt.build.core.settings.default.builder.1666600480" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="org.eclipse.cdt.build.core.settings.default.builder"/>
+					<tool id="org.eclipse.cdt.build.core.settings.holder.libs.527792650" name="holder for library settings" superClass="org.eclipse.cdt.build.core.settings.holder.libs"/>
+					<tool id="org.eclipse.cdt.build.core.settings.holder.44288356" name="Assembly" superClass="org.eclipse.cdt.build.core.settings.holder">
+						<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.214808091" languageId="org.eclipse.cdt.core.assembly" languageName="Assembly" sourceContentType="org.eclipse.cdt.core.asmSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+					</tool>
+					<tool id="org.eclipse.cdt.build.core.settings.holder.1265711608" name="UPC" superClass="org.eclipse.cdt.build.core.settings.holder">
+						<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.165963779" languageId="org.eclipse.cdt.core.parser.upc.upc" languageName="UPC" sourceContentType="org.eclipse.cdt.core.parser.upc.upcSource" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+					</tool>
+					<tool id="org.eclipse.cdt.build.core.settings.holder.1182359986" name="GNU C++" superClass="org.eclipse.cdt.build.core.settings.holder">
+						<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.1689297544" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+							<listOptionValue builtIn="false" value="/usr/include/c++/4.4.7"/>
+							<listOptionValue builtIn="false" value="/usr/include/c++/4.4.7/i686-redhat-linux"/>
+							<listOptionValue builtIn="false" value="/usr/include/c++/4.4.7/backward"/>
+							<listOptionValue builtIn="false" value="/usr/local/include"/>
+							<listOptionValue builtIn="false" value="/usr/lib/gcc/i686-redhat-linux/4.4.7/include"/>
+							<listOptionValue builtIn="false" value="/usr/include"/>
+							<listOptionValue builtIn="false" value="/home/8w4/epics/supTop/base/R3.14.11/include"/>
+							<listOptionValue builtIn="false" value="/home/8w4/epics/supTop/base/R3.14.11/include/os/Linux"/>
+						</option>
+						<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.711118947" languageId="org.eclipse.cdt.core.g++" languageName="GNU C++" sourceContentType="org.eclipse.cdt.core.cxxSource,org.eclipse.cdt.core.cxxHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+					</tool>
+					<tool id="org.eclipse.cdt.build.core.settings.holder.1209897449" name="GNU C" superClass="org.eclipse.cdt.build.core.settings.holder">
+						<option id="org.eclipse.cdt.build.core.settings.holder.incpaths.208808261" name="Include Paths" superClass="org.eclipse.cdt.build.core.settings.holder.incpaths" valueType="includePath">
+							<listOptionValue builtIn="false" value="/usr/local/include"/>
+							<listOptionValue builtIn="false" value="/usr/lib/gcc/i686-redhat-linux/4.4.7/include"/>
+							<listOptionValue builtIn="false" value="/usr/include"/>
+							<listOptionValue builtIn="false" value="/home/8w4/epics/supTop/base/R3.14.11/include"/>
+							<listOptionValue builtIn="false" value="/home/8w4/epics/supTop/base/R3.14.11/include/os/Linux"/>
+						</option>
+						<inputType id="org.eclipse.cdt.build.core.settings.holder.inType.1918212727" languageId="org.eclipse.cdt.core.gcc" languageName="GNU C" sourceContentType="org.eclipse.cdt.core.cSource,org.eclipse.cdt.core.cHeader" superClass="org.eclipse.cdt.build.core.settings.holder.inType"/>
+					</tool>
+				</toolChain>
+			</folderInfo>
+		</configuration>
+	</storageModule>
+</cproject>

@@ -1,0 +1,454 @@
+
+record(ai, "$(user):FieldServer_AI1")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 1 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI2")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 2 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI3")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 3 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI4")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 4 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI5")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 5 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI6")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 6 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI7")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 7 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI8")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 8 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI9")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 9 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI10")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 10 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI11")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 11 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI12")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 12 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI13")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 13 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI14")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 14 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI15")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 15 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI16")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 16 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI17")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 17 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI18")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 18 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI19")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 19 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI20")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 20 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI21")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 21 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI22")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 22 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI23")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 23 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI24")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 24 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI25")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 25 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI26")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 26 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI27")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 27 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI28")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 28 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI29")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 29 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI1")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 1 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI2")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 2 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI3")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 3 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI4")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 4 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI5")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 5 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI6")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 6 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI7")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 7 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI8")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 8 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI9")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 9 85")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI10")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 10 85")
+	field(SCAN, "1 second")
+}
+
+#======== fieldServer Test =============================
+
+record(ai, "$(user):BASremoteBill_AI1")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@BASremoteBill 0 1 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):Viconics_AI1")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@Viconics 2 7 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_RAO1")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 1 1 87 a8")
+	field(SCAN, "1 second")
+}
+
+#record(bi, "$(user):temp3")
+#{
+#	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+#	field(INP, "@bacnet3 4 7 111")
+#	field(SCAN, "1 second")
+#	field(ZNAM,"OFF")
+#	field(ONAM,"ON")
+#}
+
+record(bo, "$(user):FieldServer_BO1")
+{
+	field(DTYP, "BacNet")
+#/*	"Write Property..."	*/
+#/*	field(OUT, "@<device name> <object type> <object instance> <property id> <optional object array index[?]> <priority>*/
+	field(OUT, "@FieldServer 4 1 85 p8")
+	field(SCAN, "Passive")
+	field(ZNAM,"OFF")
+	field(ONAM,"ON")
+}
+
+#record(mbbi, "$(user):temp4")
+#{
+#	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+#	field(INP, "@bacnet3 4 7 111")
+#	field(SCAN, "1 second")
+#	field(ZRVL,"0")
+#	field(ONVL,"1")
+#	field(TWVL,"2")
+#	field(THVL,"3")
+#	field(FRVL,"4")
+#	field(FVVL,"5")
+#	field(SXVL,"6")
+#	field(SVVL,"7")
+#	field(EIVL,"8")
+#	field(NIVL,"9")
+#	field(TEVL,"10")
+#	field(ELVL,"11")
+#	field(TVVL,"12")
+#	field(TTVL,"13")
+#	field(FTVL,"14")
+#	field(FFVL,"15")
+#	field(ZRST,"Zero")
+#	field(ONST,"OUTSERVICE")
+#	field(TWST,"OVERRIDEN")
+#	field(THST,"FAULT")
+#	field(FRST,"INALARM")
+#	field(FVST,"5")
+#	field(SXST,"6")
+#	field(SVST,"7")
+#	field(EIST,"8")
+#	field(NIST,"9")
+#	field(TEST,"10")
+#	field(ELST,"11")
+#	field(TVST,"12")
+#	field(TTST,"13")
+#	field(FTST,"14")
+#	field(FFST,"15")
+#	field(NOBT,"16")	
+#}
+
+
+record(ao, "$(user):FieldServer_AO1")
+{
+	field(DTYP, "BacNet")
+#/*	"Write Property..."	*/
+#/*	field(OUT, "@<device name> <object type> <object instance> <property id> <optional object array index[?]> <priority>*/
+	field(OUT, "@FieldServer 1 1 85 p8")
+	field(SCAN, "Passive")
+#	field(VAL,"34")
+#	field(PINI,"yes")
+}
+#===================================================================================================================================
+#COV
+#==========================================================================================================
+record(ai, "$(user):KMC_AI1_COV")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@KMC 0 1 85 c60")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI1_COV")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 0 1 85 c60")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI1_COV")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 3 1 85 c60")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):FieldServer_AI2_COV")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 1 1 85 c65")
+	field(SCAN, "1 second")
+}
+
+record(bi, "$(user):FieldServer_BI2_COV")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@FieldServer 4 1 85 c65")
+	field(SCAN, "1 second")
+}

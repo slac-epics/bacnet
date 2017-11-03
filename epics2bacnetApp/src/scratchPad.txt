@@ -1,0 +1,152 @@
+else
+	{
+		/** Go to next element...*/
+		++pdu;
+
+		/** What kind of tag is it Context-Specific(1) or Application(0)? Should be application...*/
+
+		uint8_t tagClass;
+		uint8_t tagNumber;
+		uint32_t tagLenValTyp;
+		b->decode_bacnet_tag(pdu, &tagNumber, &tagClass, &tagLenValTyp);
+
+		switch(tagClass) {
+		case 0x0 :
+			/** Application Tag...*/
+			/** So, since it is Application Tag, then according to 20.2.1.4 the tag number portion (bits 4-7)
+			 * is a enumeration of the application tag type...*/
+			switch(tagNumber) {
+			case BACNET_APPLICATION_TAG_NULL :
+			case BACNET_APPLICATION_TAG_BOOLEAN :
+			case BACNET_APPLICATION_TAG_UNSIGNED_INT :
+			case BACNET_APPLICATION_TAG_SIGNED_INT :
+			case BACNET_APPLICATION_TAG_REAL :
+			case BACNET_APPLICATION_TAG_DOUBLE :
+			case BACNET_APPLICATION_TAG_OCTET_STRING :
+			case BACNET_APPLICATION_TAG_CHARACTER_STRING :
+			case BACNET_APPLICATION_TAG_BIT_STRING :
+			case BACNET_APPLICATION_TAG_ENUMERATED :
+			case BACNET_APPLICATION_TAG_DATE :
+			case BACNET_APPLICATION_TAG_TIME :
+			case BACNET_APPLICATION_TAG_OBJECT_ID :
+				/** move pointer to start of object id field. see 20.2.14...*/
+				++pdu;
+				uint32_t type;
+				uint32_t ins;
+				pdu = b->decode_bacnet_object_id(pdu, &type, &ins);
+
+				break;
+			default:
+				printf("\nBacNet_I_Am_Request::decode_I_Am_Request. Bad Tag Number...\n");
+				break;
+			}
+			break;
+		case 0x8 :
+			/** Context Specific...*/
+			break;
+		default:
+			printf("\nBacNet_I_Am_Request::decode_I_Am_Request. Tag is neither context or application...\n");
+			break;
+		}
+	}
+
+	return pdu;
+}
+
+==================================================================================================================================================
+
+record(calc, "increment")
+{
+	field(INPA,"increment.VAL")
+	field(CALC,"A < 11 ? A+1 : 0")
+	field(SCAN,"1 second")
+}
+
+record(ai, "$(user):temp1")
+{
+	field(DTYP, "BacNet")
+#	field(INP, "@<device name> <object type> <object instance> <property id>
+	field(INP, "@bacnet2 0 1 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):temp2")
+{
+	field(DTYP, "BacNet")
+#	field(INP, "@<device name> <object type> <object instance> <property id>
+	field(INP, "@bacnet2 0 2 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):temp3")
+{
+	field(DTYP, "BacNet")
+#	field(INP, "@<device name> <object type> <object instance> <property id>
+	field(INP, "@bacnet2 0 3 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):temp4")
+{
+	field(DTYP, "BacNet")
+#	field(INP, "@<device name> <object type> <object instance> <property id>
+	field(INP, "@bacnet1 0 3 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):temp5")
+{
+	field(DTYP, "BacNet")
+#	field(INP, "@<device name> <object type> <object instance> <property id>
+	field(INP, "@bacnet1 0 2 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):temp6")
+{
+	field(DTYP, "BacNet")
+#	field(INP, "@<device name> <object type> <object instance> <property id>
+	field(INP, "@bacnet4 0 2 85")
+	field(SCAN, "1 second")
+}
+
+
+
+===========================================================================================================================
+
+							switch(pdu[1]){
+							case SERVICE_UNCONFIRMED_I_AM:
+								iam = new BacNet_I_Am_Request();
+								iam->decode_iam_request(buffer);
+
+								dev = DrvBacNet::getBacNetDevices();
+								while(dev){
+									if(dev->getInstance() == iam->get_object_instance()){
+										if(npdu->getSourceSpecifier()){
+											dev->setSnet(npdu->getSnet());
+											dev->setSlen(npdu->getSlen());
+											dev->setSadr(npdu->getSadr(), npdu->getSlen());
+										}
+										printf("\nYay... Found a match...\n");
+										dev->set_isKnown(true);
+										if(bvlc->getFunction() == BVLC_FORWARDED_NPDU){
+											dev->setDevMac(bvlc->getForwardAddr(), 6);
+											dev->printDevMac();
+										}
+										else{
+											uint8_t tmpmac[6];
+											memcpy(tmpmac, &addr.sin_addr, 4);
+											memcpy(&tmpmac[4], &addr.sin_port, 2);
+											buffer->hexdump(tmpmac, 6);
+											dev->setDevMac(tmpmac, 6);
+										}
+									}
+									dev = dev->getNext();
+								}
+
+								break;
+							default:
+								printf("\nUnsuported PDU type: %X\n", *pdu);
+								break;
+								delete iam;
+							}

@@ -1,0 +1,60 @@
+#	field(INP, "@FieldServer 1 1 87 a8")
+#	field(OUT, "@FieldServer 1 1 85 p8")
+#	field(INP, "@FieldServer 1 1 87 c60")
+#	field(INP, "@FieldServer 1 1 87 C60 1.0")
+
+record(ai, "$(user):HT_SYSSEN")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@HT 2 3200 85")
+	field(SCAN, "1 second")
+}
+
+record(ai, "$(user):HT_MODE00")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(INP, "@HT 19 1400 85")
+	field(SCAN, "1 second")
+}
+
+record(ao, "$(user):HT_SETPT")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(OUT, "@HT 2 2600 85 p16")
+	field(SCAN, "Passive")
+}
+
+record(ao, "$(user):HT_MODE00CMD")
+{
+	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+	field(OUT, "@HT 19 1400 85 p16")
+	field(SCAN, "Passive")
+}
+
+#record(bi, "$(user):FieldServer_BI1_COV")
+#{
+#	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+#	field(INP, "@FieldServer 3 1 85 c60")
+#	field(SCAN, "1 second")
+#}
+
+#record(ai, "$(user):FieldServer_AI2_COV")
+#{
+#	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+#	field(INP, "@FieldServer 1 1 85 c65")
+#	field(SCAN, "1 second")
+#}
+
+#record(bi, "$(user):FieldServer_BI2_COV")
+#{
+#	field(DTYP, "BacNet")
+#/*	field(INP, "@<device name> <object type> <object instance> <property id> <optional object array index[?]>*/
+#	field(INP, "@FieldServer 4 1 85 c65")
+#	field(SCAN, "1 second")
+#}
