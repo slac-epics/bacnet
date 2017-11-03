@@ -83,8 +83,8 @@ epics2bacnet_LIBS += bacnetlib
 # Buid a test to test the whole driver whithout using EPICS.
 PROD_HOST += bacnet_test
 bacnet_test_LIBS += $(EPICS_BASE_IOC_LIBS)
-bacnet_test_LIBS += bacnetlib
 bacnet_test_SRCS += BacNetTestMain.cpp
+bacnet_test_LIBS += bacnetlib
 
 # Test all of the sources...
 
