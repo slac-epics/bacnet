@@ -432,6 +432,7 @@ void BacNetVariable::retry(class BacNetBuffer *buffer, class BacNetConnection *c
 		buffer->hexdump(buffer->getPointerToBuffer(), buffer->getLength());
 	}
 
-	buffer->hexdump(buffer->getPointerToBuffer(), buffer->getLength());
+	// mdunning 10/19/17 comment out hexdump below
+	//buffer->hexdump(buffer->getPointerToBuffer(), buffer->getLength());
 	int nbytes = con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
 }
