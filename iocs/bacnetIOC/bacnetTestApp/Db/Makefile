@@ -8,9 +8,10 @@ include $(TOP)/configure/CONFIG
 #DB_OPT = YES
 
 #----------------------------------------------------
-# Create and install (or just install) into <top>/db
+# Create and install (or just install)
 # databases, templates, substitutions like this
-DB += heatTimer.db
+
+DB_INSTALLS += $(BACNET)/db/heatTimer.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

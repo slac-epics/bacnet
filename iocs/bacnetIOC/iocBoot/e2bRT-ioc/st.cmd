@@ -1,4 +1,4 @@
-#!../../bin/linux-x86/epics2bacnet
+#!../../bin/linuxRT-x86_64/epics2bacnet
 
 ## You may have to change epics2bacnet to something else
 ## everywhere it appears in this file
@@ -34,7 +34,7 @@ bacnetDriverPortNumber(47808)
 bacnetDefineServer("HT", 89, 47808, 25)
 
 ## Load record instances
-dbLoadTemplate "db/userHost.substitutions"
+#dbLoadTemplate "db/userHost.substitutions"
 #dbLoadRecords "db/test.db", "user=8w4Host"
 #dbLoadRecords "db/fieldServer.db", "user=8w4Host"
 #dbLoadRecords "db/test_single.db", "user=8w4Host"

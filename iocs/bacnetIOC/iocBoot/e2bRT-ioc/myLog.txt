@@ -1,0 +1,5455 @@
+#!../../bin/linux-x86/epics2bacnet
+## You may have to change epics2bacnet to something else
+## everywhere it appears in this file
+< envPaths
+epicsEnvSet("ARCH","linux-x86")
+epicsEnvSet("IOC","e2b-ioc")
+epicsEnvSet("TOP","/home/8w4/EPICS_DEVEL/R3-14-11/bacnet2epics_Devel")
+epicsEnvSet("EPICS_BASE","/home/8w4/EPICS_DEVEL/R3-14-11/base")
+cd /home/8w4/EPICS_DEVEL/R3-14-11/bacnet2epics_Devel
+## Register all support components
+dbLoadDatabase "dbd/epics2bacnet.dbd"
+epics2bacnet_registerRecordDeviceDriver pdbbase
+# You have to provide a Hardware Interface Name that matches the
+# name of your hardware...
+bacnetDriverInterfaceName("eth0")
+#Default and most common BACnet port number...
+bacnetDriverPortNumber(47808)
+#Define a bacnet Server, Provide a name etc...
+#bacnetDefineServer("bacnet1", 10, 47808)
+bacnetDefineServer("FieldServer", 11, 47808)
+	Created device "FieldServer" successfully...
+#bacnetDefineServer("BASremoteMstr", 12, 47808)
+#bacnetDefineServer("Viconics", 73010, 47808)
+#bacnetDefineServer("BASremoteBill", 2749, 47808)
+#bacnetDefineServer("bacnet2", 15, 47808)
+#bacnetDefineServer("bacnet5", 73010, 47808)
+#bacnetDefineServer("bacnet6", 12, 47809)
+## Load record instances
+dbLoadTemplate "db/userHost.substitutions"
+dbLoadRecords "db/test.db", "user=8w4Host"
+## Set this to see messages from mySub
+#var mySubDebug 1
+## Run this to trace the stages of iocInit
+#traceIocInit
+cd /home/8w4/EPICS_DEVEL/R3-14-11/bacnet2epics_Devel/iocBoot/e2b-ioc
+iocInit
+############################################################################
+## EPICS R3.14.11-SNS $R3-14-11$ $2009/08/28 18:47:36$
+## EPICS Base built Apr  6 2011
+############################################################################
+
+	Init_AI...
+
+	FieldServer 0 1 85
+
+devName: FieldServer, object_type: 0, object_instance: 1, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 1, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 10 85
+
+devName: FieldServer, object_type: 0, object_instance: 10, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 10, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 11 85
+
+devName: FieldServer, object_type: 0, object_instance: 11, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 11, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 12 85
+
+devName: FieldServer, object_type: 0, object_instance: 12, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 12, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 13 85
+
+devName: FieldServer, object_type: 0, object_instance: 13, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 13, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 14 85
+
+devName: FieldServer, object_type: 0, object_instance: 14, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 14, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 15 85
+
+devName: FieldServer, object_type: 0, object_instance: 15, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 15, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 16 85
+
+devName: FieldServer, object_type: 0, object_instance: 16, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 16, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 17 85
+
+devName: FieldServer, object_type: 0, object_instance: 17, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 17, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 18 85
+
+devName: FieldServer, object_type: 0, object_instance: 18, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 18, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 19 85
+
+devName: FieldServer, object_type: 0, object_instance: 19, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 19, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 2 85
+
+devName: FieldServer, object_type: 0, object_instance: 2, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 2, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 20 85
+
+devName: FieldServer, object_type: 0, object_instance: 20, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 20, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 21 85
+
+devName: FieldServer, object_type: 0, object_instance: 21, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 21, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 22 85
+
+devName: FieldServer, object_type: 0, object_instance: 22, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 22, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 23 85
+
+devName: FieldServer, object_type: 0, object_instance: 23, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 23, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 24 85
+
+devName: FieldServer, object_type: 0, object_instance: 24, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 24, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 25 85
+
+devName: FieldServer, object_type: 0, object_instance: 25, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 25, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 26 85
+
+devName: FieldServer, object_type: 0, object_instance: 26, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 26, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 27 85
+
+devName: FieldServer, object_type: 0, object_instance: 27, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 27, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 28 85
+
+devName: FieldServer, object_type: 0, object_instance: 28, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 28, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 29 85
+
+devName: FieldServer, object_type: 0, object_instance: 29, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 29, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 3 85
+
+devName: FieldServer, object_type: 0, object_instance: 3, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 3, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 4 85
+
+devName: FieldServer, object_type: 0, object_instance: 4, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 4, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 5 85
+
+devName: FieldServer, object_type: 0, object_instance: 5, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 5, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 6 85
+
+devName: FieldServer, object_type: 0, object_instance: 6, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 6, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 7 85
+
+devName: FieldServer, object_type: 0, object_instance: 7, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 7, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 8 85
+
+devName: FieldServer, object_type: 0, object_instance: 8, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 8, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_AI...
+
+	FieldServer 0 9 85
+
+devName: FieldServer, object_type: 0, object_instance: 9, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 0, object_instance: 9, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 1 85
+
+devName: FieldServer, object_type: 3, object_instance: 1, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 1, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 10 85
+
+devName: FieldServer, object_type: 3, object_instance: 10, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 10, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 2 85
+
+devName: FieldServer, object_type: 3, object_instance: 2, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 2, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 3 85
+
+devName: FieldServer, object_type: 3, object_instance: 3, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 3, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 4 85
+
+devName: FieldServer, object_type: 3, object_instance: 4, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 4, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 5 85
+
+devName: FieldServer, object_type: 3, object_instance: 5, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 5, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 6 85
+
+devName: FieldServer, object_type: 3, object_instance: 6, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 6, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 7 85
+
+devName: FieldServer, object_type: 3, object_instance: 7, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 7, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 8 85
+
+devName: FieldServer, object_type: 3, object_instance: 8, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 8, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+
+	Init_BI...
+
+	FieldServer 3 9 85
+
+devName: FieldServer, object_type: 3, object_instance: 9, property_id: 85, array_index: (null), write_priority: (null)
+
+devName: FieldServer, object_type: 3, object_instance: 9, property_id: 85, array_index: -1, write_priority: 0
+
+	error: (null)
+
+	Yo! I found this device: FieldServer
+bacnetListServerInfo(5)
+
+BACnet device: "FieldServer" has 39 variables {
+	(Variable-1)	Object-Type: (3)Binary Input,	Instance: 9,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-2)	Object-Type: (3)Binary Input,	Instance: 8,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-3)	Object-Type: (3)Binary Input,	Instance: 7,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-4)	Object-Type: (3)Binary Input,	Instance: 6,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-5)	Object-Type: (3)Binary Input,	Instance: 5,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-6)	Object-Type: (3)Binary Input,	Instance: 4,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-7)	Object-Type: (3)Binary Input,	Instance: 3,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-8)	Object-Type: (3)Binary Input,	Instance: 2,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-9)	Object-Type: (3)Binary Input,	Instance: 10,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-10)	Object-Type: (3)Binary Input,	Instance: 1,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-11)	Object-Type: (0)Analog Input,	Instance: 9,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-12)	Object-Type: (0)Analog Input,	Instance: 8,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-13)	Object-Type: (0)Analog Input,	Instance: 7,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-14)	Object-Type: (0)Analog Input,	Instance: 6,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-15)	Object-Type: (0)Analog Input,	Instance: 5,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-16)	Object-Type: (0)Analog Input,	Instance: 4,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-17)	Object-Type: (0)Analog Input,	Instance: 3,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-18)	Object-Type: (0)Analog Input,	Instance: 29,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-19)	Object-Type: (0)Analog Input,	Instance: 28,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-20)	Object-Type: (0)Analog Input,	Instance: 27,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-21)	Object-Type: (0)Analog Input,	Instance: 26,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-22)	Object-Type: (0)Analog Input,	Instance: 25,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-23)	Object-Type: (0)Analog Input,	Instance: 24,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-24)	Object-Type: (0)Analog Input,	Instance: 23,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-25)	Object-Type: (0)Analog Input,	Instance: 22,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-26)	Object-Type: (0)Analog Input,	Instance: 21,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-27)	Object-Type: (0)Analog Input,	Instance: 20,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-28)	Object-Type: (0)Analog Input,	Instance: 2,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-29)	Object-Type: (0)Analog Input,	Instance: 19,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-30)	Object-Type: (0)Analog Input,	Instance: 18,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-31)	Object-Type: (0)Analog Input,	Instance: 17,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-32)	Object-Type: (0)Analog Input,	Instance: 16,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-33)	Object-Type: (0)Analog Input,	Instance: 15,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-34)	Object-Type: (0)Analog Input,	Instance: 14,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-35)	Object-Type: (0)Analog Input,	Instance: 13,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-36)	Object-Type: (0)Analog Input,	Instance: 12,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-37)	Object-Type: (0)Analog Input,	Instance: 11,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-38)	Object-Type: (0)Analog Input,	Instance: 10,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+	(Variable-39)	Object-Type: (0)Analog Input,	Instance: 1,	Property-Id: (85)present-value,	Array-Index: -1,	Write-Priority: 0
+
+	}
+bacnetDriverStart(1)
+bacnetDriverVerbosity(3)
+
+Setting verbosity_level: 0, level: 3
+## Start any sequence programs
+#seq sncExample, "user=8w4Host"
+My local addr is: 160.91.236.159
+My Broadcast addr is: 160.91.237.255
+Bound to Socket: 8, IP: 0.0.0.0, Port: 49338
+	Starting the Server...BACSERVER
+Bacnet Driver Thread started
+	This device "FieldServer" is unknown; do a "who-is"...
+
+tagNumber: 0, tagLenValType: 11
+
+tagNumber: 1, tagLenValType: 11
+ 81 0B 00 10 01 20 FF FF 00 FE 10 08 09 0B 19 0B
+
+Socket: 8, pdu_len: 16, addr: 160.91.237.255
+Bytes sent: 16
+	Who-is? "FieldServer"... "FieldServer"... "FieldServer"...
+	I am listening for BACNET packets on port: 47808 using socket:8.
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0B 00 18 01 20 FF FF 00 FF 10 00 C4 02 00 00
+ 0B 22 05 B2 91 03 21 25
+
+<<<Message end.
+It is a BVLC_ORIGINAL_BROADCAST_NPDU message...
+
+PDU_TYPE_UNCONFIRMED_SERVICE_REQUEST (10)
+
+SERVICE_UNCONFIRMED_I_AM: (0)
+ 00 C4 02 00 00
+ C4 02 00 00 0B
+ 22 05 B2 91 03
+
+ObjType: 8, Instance: 11
+
+TagNumber: 2, TagClass: 0, TagLVT: 2
+
+UVAL: 1458
+
+TagNumber: 9, TagClass: 0, TagLVT: 1
+
+ENUMVAL: 3
+
+TagNumber: 2, TagClass: 0, TagLVT: 1
+
+VENDOR: 37
+
+Yay... Found a match...
+ A0 5B EC 7A BA C0
+epics> 	I am listening for BACNET packets on port: 47808 using socket:8.
+	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+Registering this InvokeId: 1 to var: 0x9ab6730
+
+tagNumber: 0, tagLenValType: 12582921
+ 00 05 01 0C 0C 00 C0 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 01 0C 0C 00 C0 00 09 19 55
+ 00 05 01 0C 0C 00 C0 00 09 19 55
+ 01 04 00 05 01 0C 0C 00 C0 00 09 19 55
+ 81 0A 00 11 01 04 00 05 01 0C 0C 00 C0 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+Registering this InvokeId: 2 to var: 0x9ab66c8
+
+tagNumber: 0, tagLenValType: 12582920
+ 00 05 02 0C 0C 00 C0 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 02 0C 0C 00 C0 00 08 19 55
+ 00 05 02 0C 0C 00 C0 00 08 19 55
+ 01 04 00 05 02 0C 0C 00 C0 00 08 19 55
+ 81 0A 00 11 01 04 00 05 02 0C 0C 00 C0 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+Registering this InvokeId: 3 to var: 0x9ab6660
+
+tagNumber: 0, tagLenValType: 12582919
+ 00 05 03 0C 0C 00 C0 00 07
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 03 0C 0C 00 C0 00 07 19 55
+ 00 05 03 0C 0C 00 C0 00 07 19 55
+ 01 04 00 05 03 0C 0C 00 C0 00 07 19 55
+ 81 0A 00 11 01 04 00 05 03 0C 0C 00 C0 00 07 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+Registering this InvokeId: 4 to var: 0x9ab65f8
+
+tagNumber: 0, tagLenValType: 12582918
+ 00 05 04 0C 0C 00 C0 00 06
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 04 0C 0C 00 C0 00 06 19 55
+ 00 05 04 0C 0C 00 C0 00 06 19 55
+ 01 04 00 05 04 0C 0C 00 C0 00 06 19 55
+ 81 0A 00 11 01 04 00 05 04 0C 0C 00 C0 00 06 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+Registering this InvokeId: 5 to var: 0x9ab6590
+
+tagNumber: 0, tagLenValType: 12582917
+ 00 05 05 0C 0C 00 C0 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 05 0C 0C 00 C0 00 05 19 55
+ 00 05 05 0C 0C 00 C0 00 05 19 55
+ 01 04 00 05 05 0C 0C 00 C0 00 05 19 55
+ 81 0A 00 11 01 04 00 05 05 0C 0C 00 C0 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+Registering this InvokeId: 6 to var: 0x9ab6528
+
+tagNumber: 0, tagLenValType: 12582916
+ 00 05 06 0C 0C 00 C0 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 06 0C 0C 00 C0 00 04 19 55
+ 00 05 06 0C 0C 00 C0 00 04 19 55
+ 01 04 00 05 06 0C 0C 00 C0 00 04 19 55
+ 81 0A 00 11 01 04 00 05 06 0C 0C 00 C0 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+Registering this InvokeId: 7 to var: 0x9ab64c0
+
+tagNumber: 0, tagLenValType: 12582915
+ 00 05 07 0C 0C 00 C0 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 07 0C 0C 00 C0 00 03 19 55
+ 00 05 07 0C 0C 00 C0 00 03 19 55
+ 01 04 00 05 07 0C 0C 00 C0 00 03 19 55
+ 81 0A 00 11 01 04 00 05 07 0C 0C 00 C0 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+Registering this InvokeId: 8 to var: 0x9ab6458
+
+tagNumber: 0, tagLenValType: 12582914
+ 00 05 08 0C 0C 00 C0 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 08 0C 0C 00 C0 00 02 19 55
+ 00 05 08 0C 0C 00 C0 00 02 19 55
+ 01 04 00 05 08 0C 0C 00 C0 00 02 19 55
+ 81 0A 00 11 01 04 00 05 08 0C 0C 00 C0 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+Registering this InvokeId: 9 to var: 0x9ab63f0
+
+tagNumber: 0, tagLenValType: 12582922
+ 00 05 09 0C 0C 00 C0 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 09 0C 0C 00 C0 00 0A 19 55
+ 00 05 09 0C 0C 00 C0 00 0A 19 55
+ 01 04 00 05 09 0C 0C 00 C0 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 09 0C 0C 00 C0 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+Registering this InvokeId: 10 to var: 0x9ab6388
+
+tagNumber: 0, tagLenValType: 12582913
+ 00 05 0A 0C 0C 00 C0 00 01
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0A 0C 0C 00 C0 00 01 19 55
+ 00 05 0A 0C 0C 00 C0 00 01 19 55
+ 01 04 00 05 0A 0C 0C 00 C0 00 01 19 55
+ 81 0A 00 11 01 04 00 05 0A 0C 0C 00 C0 00 01 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+Registering this InvokeId: 11 to var: 0x9ab6318
+
+tagNumber: 0, tagLenValType: 9
+ 00 05 0B 0C 0C 00 00 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0B 0C 0C 00 00 00 09 19 55
+ 00 05 0B 0C 0C 00 00 00 09 19 55
+ 01 04 00 05 0B 0C 0C 00 00 00 09 19 55
+ 81 0A 00 11 01 04 00 05 0B 0C 0C 00 00 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+Registering this InvokeId: 12 to var: 0x9ab62a8
+
+tagNumber: 0, tagLenValType: 8
+ 00 05 0C 0C 0C 00 00 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0C 0C 0C 00 00 00 08 19 55
+ 00 05 0C 0C 0C 00 00 00 08 19 55
+ 01 04 00 05 0C 0C 0C 00 00 00 08 19 55
+ 81 0A 00 11 01 04 00 05 0C 0C 0C 00 00 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+Registering this InvokeId: 13 to var: 0x9ab6238
+
+tagNumber: 0, tagLenValType: 7
+ 00 05 0D 0C 0F
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0D 0C 0F 19 55
+ 00 05 0D 0C 0F 19 55
+ 01 04 00 05 0D 0C 0F 19 55
+ 81 0A 00 0D 01 04 00 05 0D 0C 0F 19 55
+Socket: 8, pdu_len: 13, addr: 160.91.236.122
+Bytes sent: 13
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+Registering this InvokeId: 14 to var: 0x9ab61c8
+
+tagNumber: 0, tagLenValType: 6
+ 00 05 0E 0C 0E
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0E 0C 0E 19 55
+ 00 05 0E 0C 0E 19 55
+ 01 04 00 05 0E 0C 0E 19 55
+ 81 0A 00 0D 01 04 00 05 0E 0C 0E 19 55
+Socket: 8, pdu_len: 13, addr: 160.91.236.122
+Bytes sent: 13
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+Registering this InvokeId: 15 to var: 0x9ab6158
+
+tagNumber: 0, tagLenValType: 5
+ 00 05 0F 0C 0C 00 00 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0F 0C 0C 00 00 00 05 19 55
+ 00 05 0F 0C 0C 00 00 00 05 19 55
+ 01 04 00 05 0F 0C 0C 00 00 00 05 19 55
+ 81 0A 00 11 01 04 00 05 0F 0C 0C 00 00 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+Registering this InvokeId: 16 to var: 0x9ab60e8
+
+tagNumber: 0, tagLenValType: 4
+ 00 05 10 0C 0C 00 00 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 10 0C 0C 00 00 00 04 19 55
+ 00 05 10 0C 0C 00 00 00 04 19 55
+ 01 04 00 05 10 0C 0C 00 00 00 04 19 55
+ 81 0A 00 11 01 04 00 05 10 0C 0C 00 00 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+Registering this InvokeId: 17 to var: 0x9ab6078
+
+tagNumber: 0, tagLenValType: 3
+ 00 05 11 0C 0C 00 00 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 11 0C 0C 00 00 00 03 19 55
+ 00 05 11 0C 0C 00 00 00 03 19 55
+ 01 04 00 05 11 0C 0C 00 00 00 03 19 55
+ 81 0A 00 11 01 04 00 05 11 0C 0C 00 00 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+Registering this InvokeId: 18 to var: 0x9ab6008
+
+tagNumber: 0, tagLenValType: 29
+ 00 05 12 0C 0C 00 00 00 1D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 12 0C 0C 00 00 00 1D 19 55
+ 00 05 12 0C 0C 00 00 00 1D 19 55
+ 01 04 00 05 12 0C 0C 00 00 00 1D 19 55
+ 81 0A 00 11 01 04 00 05 12 0C 0C 00 00 00 1D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+Registering this InvokeId: 19 to var: 0x9ab5f98
+
+tagNumber: 0, tagLenValType: 28
+ 00 05 13 0C 0C 00 00 00 1C
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 13 0C 0C 00 00 00 1C 19 55
+ 00 05 13 0C 0C 00 00 00 1C 19 55
+ 01 04 00 05 13 0C 0C 00 00 00 1C 19 55
+ 81 0A 00 11 01 04 00 05 13 0C 0C 00 00 00 1C 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+Registering this InvokeId: 20 to var: 0x9ab5f28
+
+tagNumber: 0, tagLenValType: 27
+ 00 05 14 0C 0C 00 00 00 1B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 14 0C 0C 00 00 00 1B 19 55
+ 00 05 14 0C 0C 00 00 00 1B 19 55
+ 01 04 00 05 14 0C 0C 00 00 00 1B 19 55
+ 81 0A 00 11 01 04 00 05 14 0C 0C 00 00 00 1B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+Registering this InvokeId: 21 to var: 0x9ab5eb8
+
+tagNumber: 0, tagLenValType: 26
+ 00 05 15 0C 0C 00 00 00 1A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 15 0C 0C 00 00 00 1A 19 55
+ 00 05 15 0C 0C 00 00 00 1A 19 55
+ 01 04 00 05 15 0C 0C 00 00 00 1A 19 55
+ 81 0A 00 11 01 04 00 05 15 0C 0C 00 00 00 1A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+Registering this InvokeId: 22 to var: 0x9ab5e48
+
+tagNumber: 0, tagLenValType: 25
+ 00 05 16 0C 0C 00 00 00 19
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 16 0C 0C 00 00 00 19 19 55
+ 00 05 16 0C 0C 00 00 00 19 19 55
+ 01 04 00 05 16 0C 0C 00 00 00 19 19 55
+ 81 0A 00 11 01 04 00 05 16 0C 0C 00 00 00 19 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+Registering this InvokeId: 23 to var: 0x9ab5dd8
+
+tagNumber: 0, tagLenValType: 24
+ 00 05 17 0C 0C 00 00 00 18
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 17 0C 0C 00 00 00 18 19 55
+ 00 05 17 0C 0C 00 00 00 18 19 55
+ 01 04 00 05 17 0C 0C 00 00 00 18 19 55
+ 81 0A 00 11 01 04 00 05 17 0C 0C 00 00 00 18 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+Registering this InvokeId: 24 to var: 0x9ab5d68
+
+tagNumber: 0, tagLenValType: 23
+ 00 05 18 0C 0C 00 00 00 17
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 18 0C 0C 00 00 00 17 19 55
+ 00 05 18 0C 0C 00 00 00 17 19 55
+ 01 04 00 05 18 0C 0C 00 00 00 17 19 55
+ 81 0A 00 11 01 04 00 05 18 0C 0C 00 00 00 17 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+Registering this InvokeId: 25 to var: 0x9ab5cf8
+
+tagNumber: 0, tagLenValType: 22
+ 00 05 19 0C 0C 00 00 00 16
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 19 0C 0C 00 00 00 16 19 55
+ 00 05 19 0C 0C 00 00 00 16 19 55
+ 01 04 00 05 19 0C 0C 00 00 00 16 19 55
+ 81 0A 00 11 01 04 00 05 19 0C 0C 00 00 00 16 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+Registering this InvokeId: 26 to var: 0x9ab5c88
+
+tagNumber: 0, tagLenValType: 21
+ 00 05 1A 0C 0C 00 00 00 15
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 1A 0C 0C 00 00 00 15 19 55
+ 00 05 1A 0C 0C 00 00 00 15 19 55
+ 01 04 00 05 1A 0C 0C 00 00 00 15 19 55
+ 81 0A 00 11 01 04 00 05 1A 0C 0C 00 00 00 15 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+Registering this InvokeId: 27 to var: 0x9ab5c18
+
+tagNumber: 0, tagLenValType: 20
+ 00 05 1B 0C 0C 00 00 00 14
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 1B 0C 0C 00 00 00 14 19 55
+ 00 05 1B 0C 0C 00 00 00 14 19 55
+ 01 04 00 05 1B 0C 0C 00 00 00 14 19 55
+ 81 0A 00 11 01 04 00 05 1B 0C 0C 00 00 00 14 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+Registering this InvokeId: 28 to var: 0x9ab5ba8
+
+tagNumber: 0, tagLenValType: 2
+ 00 05 1C 0C 0C 00 00 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 1C 0C 0C 00 00 00 02 19 55
+ 00 05 1C 0C 0C 00 00 00 02 19 55
+ 01 04 00 05 1C 0C 0C 00 00 00 02 19 55
+ 81 0A 00 11 01 04 00 05 1C 0C 0C 00 00 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+Registering this InvokeId: 29 to var: 0x9ab5b38
+
+tagNumber: 0, tagLenValType: 19
+ 00 05 1D 0C 0C 00 00 00 13
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 1D 0C 0C 00 00 00 13 19 55
+ 00 05 1D 0C 0C 00 00 00 13 19 55
+ 01 04 00 05 1D 0C 0C 00 00 00 13 19 55
+ 81 0A 00 11 01 04 00 05 1D 0C 0C 00 00 00 13 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+Registering this InvokeId: 30 to var: 0x9ab5ac8
+
+tagNumber: 0, tagLenValType: 18
+ 00 05 1E 0C 0C 00 00 00 12
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 1E 0C 0C 00 00 00 12 19 55
+ 00 05 1E 0C 0C 00 00 00 12 19 55
+ 01 04 00 05 1E 0C 0C 00 00 00 12 19 55
+ 81 0A 00 11 01 04 00 05 1E 0C 0C 00 00 00 12 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+Registering this InvokeId: 31 to var: 0x9ab5a58
+
+tagNumber: 0, tagLenValType: 17
+ 00 05 1F 0C 0C 00 00 00 11
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 1F 0C 0C 00 00 00 11 19 55
+ 00 05 1F 0C 0C 00 00 00 11 19 55
+ 01 04 00 05 1F 0C 0C 00 00 00 11 19 55
+ 81 0A 00 11 01 04 00 05 1F 0C 0C 00 00 00 11 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+Registering this InvokeId: 32 to var: 0x9ab59e8
+
+tagNumber: 0, tagLenValType: 16
+ 00 05 20 0C 0C 00 00 00 10
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 20 0C 0C 00 00 00 10 19 55
+ 00 05 20 0C 0C 00 00 00 10 19 55
+ 01 04 00 05 20 0C 0C 00 00 00 10 19 55
+ 81 0A 00 11 01 04 00 05 20 0C 0C 00 00 00 10 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+Registering this InvokeId: 33 to var: 0x9ab5978
+
+tagNumber: 0, tagLenValType: 15
+ 00 05 21 0C 0C 00 00 00 0F
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 21 0C 0C 00 00 00 0F 19 55
+ 00 05 21 0C 0C 00 00 00 0F 19 55
+ 01 04 00 05 21 0C 0C 00 00 00 0F 19 55
+ 81 0A 00 11 01 04 00 05 21 0C 0C 00 00 00 0F 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+Registering this InvokeId: 34 to var: 0x9ab5908
+
+tagNumber: 0, tagLenValType: 14
+ 00 05 22 0C 0C 00 00 00 0E
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 22 0C 0C 00 00 00 0E 19 55
+ 00 05 22 0C 0C 00 00 00 0E 19 55
+ 01 04 00 05 22 0C 0C 00 00 00 0E 19 55
+ 81 0A 00 11 01 04 00 05 22 0C 0C 00 00 00 0E 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+Registering this InvokeId: 35 to var: 0x9ab5898
+
+tagNumber: 0, tagLenValType: 13
+ 00 05 23 0C 0C 00 00 00 0D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 23 0C 0C 00 00 00 0D 19 55
+ 00 05 23 0C 0C 00 00 00 0D 19 55
+ 01 04 00 05 23 0C 0C 00 00 00 0D 19 55
+ 81 0A 00 11 01 04 00 05 23 0C 0C 00 00 00 0D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+Registering this InvokeId: 36 to var: 0x9ab5828
+
+tagNumber: 0, tagLenValType: 12
+ 00 05 24 0C 0C 00 00 00 0C
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 24 0C 0C 00 00 00 0C 19 55
+ 00 05 24 0C 0C 00 00 00 0C 19 55
+ 01 04 00 05 24 0C 0C 00 00 00 0C 19 55
+ 81 0A 00 11 01 04 00 05 24 0C 0C 00 00 00 0C 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+Registering this InvokeId: 37 to var: 0x9ab57b8
+
+tagNumber: 0, tagLenValType: 11
+ 00 05 25 0C 0C 00 00 00 0B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 25 0C 0C 00 00 00 0B 19 55
+ 00 05 25 0C 0C 00 00 00 0B 19 55
+ 01 04 00 05 25 0C 0C 00 00 00 0B 19 55
+ 81 0A 00 11 01 04 00 05 25 0C 0C 00 00 00 0B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+Registering this InvokeId: 38 to var: 0x9ab5748
+
+tagNumber: 0, tagLenValType: 10
+ 00 05 26 0C 0C 00 00 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 26 0C 0C 00 00 00 0A 19 55
+ 00 05 26 0C 0C 00 00 00 0A 19 55
+ 01 04 00 05 26 0C 0C 00 00 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 26 0C 0C 00 00 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+Registering this InvokeId: 39 to var: 0x9ab56d8
+
+tagNumber: 0, tagLenValType: 1
+ 00 05 27 0C 0C 00 00 00 01
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 27 0C 0C 00 00 00 01 19 55
+ 00 05 27 0C 0C 00 00 00 01 19 55
+ 01 04 00 05 27 0C 0C 00 00 00 01 19 55
+ 81 0A 00 11 01 04 00 05 27 0C 0C 00 00 00 01 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 01 0C 0C 00 C0 00 09 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 9
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 02 0C 0C 00 C0 00 08 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 8
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 03 0C 0C 00 C0 00 07 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 7
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 04 0C 0C 00 C0 00 06 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 6
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 05 0C 0C 00 C0 00 05 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 5
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 06 0C 0C 00 C0 00 04 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 4
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 07 0C 0C 00 C0 00 03 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 3
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 08 0C 0C 00 C0 00 02 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 2
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 09 0C 0C 00 C0 00 0A 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 10
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 0A 0C 0C 00 C0 00 01 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 1
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+Registering this InvokeId: 40 to var: 0x9ab6730
+
+tagNumber: 0, tagLenValType: 12582921
+ 00 05 28 0C 0C 00 C0 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 28 0C 0C 00 C0 00 09 19 55
+ 00 05 28 0C 0C 00 C0 00 09 19 55
+ 01 04 00 05 28 0C 0C 00 C0 00 09 19 55
+ 81 0A 00 11 01 04 00 05 28 0C 0C 00 C0 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+Registering this InvokeId: 41 to var: 0x9ab66c8
+
+tagNumber: 0, tagLenValType: 12582920
+ 00 05 29 0C 0C 00 C0 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 29 0C 0C 00 C0 00 08 19 55
+ 00 05 29 0C 0C 00 C0 00 08 19 55
+ 01 04 00 05 29 0C 0C 00 C0 00 08 19 55
+ 81 0A 00 11 01 04 00 05 29 0C 0C 00 C0 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+Registering this InvokeId: 42 to var: 0x9ab6660
+
+tagNumber: 0, tagLenValType: 12582919
+ 00 05 2A 0C 0C 00 C0 00 07
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 2A 0C 0C 00 C0 00 07 19 55
+ 00 05 2A 0C 0C 00 C0 00 07 19 55
+ 01 04 00 05 2A 0C 0C 00 C0 00 07 19 55
+ 81 0A 00 11 01 04 00 05 2A 0C 0C 00 C0 00 07 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+Registering this InvokeId: 43 to var: 0x9ab65f8
+
+tagNumber: 0, tagLenValType: 12582918
+ 00 05 2B 0C 0C 00 C0 00 06
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 2B 0C 0C 00 C0 00 06 19 55
+ 00 05 2B 0C 0C 00 C0 00 06 19 55
+ 01 04 00 05 2B 0C 0C 00 C0 00 06 19 55
+ 81 0A 00 11 01 04 00 05 2B 0C 0C 00 C0 00 06 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+Registering this InvokeId: 44 to var: 0x9ab6590
+
+tagNumber: 0, tagLenValType: 12582917
+ 00 05 2C 0C 0C 00 C0 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 2C 0C 0C 00 C0 00 05 19 55
+ 00 05 2C 0C 0C 00 C0 00 05 19 55
+ 01 04 00 05 2C 0C 0C 00 C0 00 05 19 55
+ 81 0A 00 11 01 04 00 05 2C 0C 0C 00 C0 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+Registering this InvokeId: 45 to var: 0x9ab6528
+
+tagNumber: 0, tagLenValType: 12582916
+ 00 05 2D 0C 0C 00 C0 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 2D 0C 0C 00 C0 00 04 19 55
+ 00 05 2D 0C 0C 00 C0 00 04 19 55
+ 01 04 00 05 2D 0C 0C 00 C0 00 04 19 55
+ 81 0A 00 11 01 04 00 05 2D 0C 0C 00 C0 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+Registering this InvokeId: 46 to var: 0x9ab64c0
+
+tagNumber: 0, tagLenValType: 12582915
+ 00 05 2E 0C 0C 00 C0 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 2E 0C 0C 00 C0 00 03 19 55
+ 00 05 2E 0C 0C 00 C0 00 03 19 55
+ 01 04 00 05 2E 0C 0C 00 C0 00 03 19 55
+ 81 0A 00 11 01 04 00 05 2E 0C 0C 00 C0 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+Registering this InvokeId: 47 to var: 0x9ab6458
+
+tagNumber: 0, tagLenValType: 12582914
+ 00 05 2F 0C 0C 00 C0 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 2F 0C 0C 00 C0 00 02 19 55
+ 00 05 2F 0C 0C 00 C0 00 02 19 55
+ 01 04 00 05 2F 0C 0C 00 C0 00 02 19 55
+ 81 0A 00 11 01 04 00 05 2F 0C 0C 00 C0 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+Registering this InvokeId: 48 to var: 0x9ab63f0
+
+tagNumber: 0, tagLenValType: 12582922
+ 00 05 30 0C 0C 00 C0 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 30 0C 0C 00 C0 00 0A 19 55
+ 00 05 30 0C 0C 00 C0 00 0A 19 55
+ 01 04 00 05 30 0C 0C 00 C0 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 30 0C 0C 00 C0 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+Registering this InvokeId: 49 to var: 0x9ab6388
+
+tagNumber: 0, tagLenValType: 12582913
+ 00 05 31 0C 0C 00 C0 00 01
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 31 0C 0C 00 C0 00 01 19 55
+ 00 05 31 0C 0C 00 C0 00 01 19 55
+ 01 04 00 05 31 0C 0C 00 C0 00 01 19 55
+ 81 0A 00 11 01 04 00 05 31 0C 0C 00 C0 00 01 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+1.002839 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 9) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+1.002821 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 8) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+1.002794 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+1.002768 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+1.002743 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 5) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+1.002710 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 4) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+1.002675 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 3) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+1.002641 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 29) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+1.002611 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 28) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+1.002582 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 27) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+1.002548 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 26) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+1.002519 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 25) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+1.002486 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 24) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+1.002457 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 23) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+1.002424 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 22) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+1.002391 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 21) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+1.002360 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 20) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+1.002337 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+1.002303 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 19) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+1.002269 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 18) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+1.002239 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 17) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+1.002210 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 16) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+1.002172 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 15) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+1.002145 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 14) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+1.002113 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 13) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+1.002083 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 12) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+1.002049 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 11) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+1.002014 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+1.001984 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 1) is late... Can't wait forever...
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 0B 0C 0C 00 00 00 09 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 9
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 0C 0C 0C 00 00 00 08 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 8
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 0F 0C 0C 00 00 00 05 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 5
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 10 0C 0C 00 00 00 04 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 4
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 11 0C 0C 00 00 00 03 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 3
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 12 0C 0C 00 00 00 1D 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 29
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 13 0C 0C 00 00 00 1C 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 28
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 14 0C 0C 00 00 00 1B 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 27
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 15 0C 0C 00 00 00 1A 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 26
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 16 0C 0C 00 00 00 19 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 25
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+1.002610 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 9) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+1.002524 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 8) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+1.002463 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+1.002412 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+1.002361 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 5) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+1.002314 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 4) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+1.002291 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 3) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+1.002260 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+1.002232 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+1.002204 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 1) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+Registering this InvokeId: 50 to var: 0x9ab6318
+
+tagNumber: 0, tagLenValType: 9
+ 00 05 32 0C 0C 00 00 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 32 0C 0C 00 00 00 09 19 55
+ 00 05 32 0C 0C 00 00 00 09 19 55
+ 01 04 00 05 32 0C 0C 00 00 00 09 19 55
+ 81 0A 00 11 01 04 00 05 32 0C 0C 00 00 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+Registering this InvokeId: 51 to var: 0x9ab62a8
+
+tagNumber: 0, tagLenValType: 8
+ 00 05 33 0C 0C 00 00 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 33 0C 0C 00 00 00 08 19 55
+ 00 05 33 0C 0C 00 00 00 08 19 55
+ 01 04 00 05 33 0C 0C 00 00 00 08 19 55
+ 81 0A 00 11 01 04 00 05 33 0C 0C 00 00 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+2.005071 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+2.005046 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+Registering this InvokeId: 52 to var: 0x9ab6158
+
+tagNumber: 0, tagLenValType: 5
+ 00 05 34 0C 0C 00 00 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 34 0C 0C 00 00 00 05 19 55
+ 00 05 34 0C 0C 00 00 00 05 19 55
+ 01 04 00 05 34 0C 0C 00 00 00 05 19 55
+ 81 0A 00 11 01 04 00 05 34 0C 0C 00 00 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+Registering this InvokeId: 53 to var: 0x9ab60e8
+
+tagNumber: 0, tagLenValType: 4
+ 00 05 35 0C 0C 00 00 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 35 0C 0C 00 00 00 04 19 55
+ 00 05 35 0C 0C 00 00 00 04 19 55
+ 01 04 00 05 35 0C 0C 00 00 00 04 19 55
+ 81 0A 00 11 01 04 00 05 35 0C 0C 00 00 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+Registering this InvokeId: 54 to var: 0x9ab6078
+
+tagNumber: 0, tagLenValType: 3
+ 00 05 36 0C 0C 00 00 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 36 0C 0C 00 00 00 03 19 55
+ 00 05 36 0C 0C 00 00 00 03 19 55
+ 01 04 00 05 36 0C 0C 00 00 00 03 19 55
+ 81 0A 00 11 01 04 00 05 36 0C 0C 00 00 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+Registering this InvokeId: 55 to var: 0x9ab6008
+
+tagNumber: 0, tagLenValType: 29
+ 00 05 37 0C 0C 00 00 00 1D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 37 0C 0C 00 00 00 1D 19 55
+ 00 05 37 0C 0C 00 00 00 1D 19 55
+ 01 04 00 05 37 0C 0C 00 00 00 1D 19 55
+ 81 0A 00 11 01 04 00 05 37 0C 0C 00 00 00 1D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+Registering this InvokeId: 56 to var: 0x9ab5f98
+
+tagNumber: 0, tagLenValType: 28
+ 00 05 38 0C 0C 00 00 00 1C
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 38 0C 0C 00 00 00 1C 19 55
+ 00 05 38 0C 0C 00 00 00 1C 19 55
+ 01 04 00 05 38 0C 0C 00 00 00 1C 19 55
+ 81 0A 00 11 01 04 00 05 38 0C 0C 00 00 00 1C 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+Registering this InvokeId: 57 to var: 0x9ab5f28
+
+tagNumber: 0, tagLenValType: 27
+ 00 05 39 0C 0C 00 00 00 1B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 39 0C 0C 00 00 00 1B 19 55
+ 00 05 39 0C 0C 00 00 00 1B 19 55
+ 01 04 00 05 39 0C 0C 00 00 00 1B 19 55
+ 81 0A 00 11 01 04 00 05 39 0C 0C 00 00 00 1B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+Registering this InvokeId: 58 to var: 0x9ab5eb8
+
+tagNumber: 0, tagLenValType: 26
+ 00 05 3A 0C 0C 00 00 00 1A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 3A 0C 0C 00 00 00 1A 19 55
+ 00 05 3A 0C 0C 00 00 00 1A 19 55
+ 01 04 00 05 3A 0C 0C 00 00 00 1A 19 55
+ 81 0A 00 11 01 04 00 05 3A 0C 0C 00 00 00 1A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+Registering this InvokeId: 59 to var: 0x9ab5e48
+
+tagNumber: 0, tagLenValType: 25
+ 00 05 3B 0C 0C 00 00 00 19
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 3B 0C 0C 00 00 00 19 19 55
+ 00 05 3B 0C 0C 00 00 00 19 19 55
+ 01 04 00 05 3B 0C 0C 00 00 00 19 19 55
+ 81 0A 00 11 01 04 00 05 3B 0C 0C 00 00 00 19 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+2.005026 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 24) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+2.004998 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 23) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+2.004965 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 22) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+2.004933 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 21) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+2.004902 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 20) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+2.004871 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+2.004837 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 19) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+2.004803 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 18) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+2.004775 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 17) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+2.004745 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 16) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+2.004708 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 15) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+2.004680 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 14) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+2.004648 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 13) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+2.004618 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 12) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+2.004584 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 11) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+2.004550 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+2.004520 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 1) is late... Can't wait forever...
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 17 0C 0C 00 00 00 18 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 24
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 18 0C 0C 00 00 00 17 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 23
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 19 0C 0C 00 00 00 16 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 22
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 1A 0C 0C 00 00 00 15 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 21
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 1B 0C 0C 00 00 00 14 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 20
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 1C 0C 0C 00 00 00 02 19 55
+ 3E 44 3C A3 D7 0A 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 2
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.020000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 1D 0C 0C 00 00 00 13 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 19
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 1E 0C 0C 00 00 00 12 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 18
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 1F 0C 0C 00 00 00 11 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 17
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 20 0C 0C 00 00 00 10 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 16
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+2.004160 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 9) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+2.004071 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 8) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+2.004010 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+2.003959 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+2.003908 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 5) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+2.003861 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 4) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+2.003832 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 3) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+2.003801 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+2.003773 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+2.003745 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 1) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+1.001538 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 9) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+1.001452 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 8) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+3.006491 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (2) to send...
+
+tagNumber: 0, tagLenValType: 7
+ 00 05 0D 0C 0F
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0D 0C 0F 19 55
+ 00 05 0D 0C 0F 19 55
+ 01 04 00 05 0D 0C 0F 19 55
+ 81 0A 00 0D 01 04 00 05 0D 0C 0F 19 55
+Socket: 8, pdu_len: 13, addr: 160.91.236.122
+Bytes sent: 13
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+3.006561 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (3) to send...
+
+tagNumber: 0, tagLenValType: 6
+ 00 05 0E 0C 0E
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0E 0C 0E 19 55
+ 00 05 0E 0C 0E 19 55
+ 01 04 00 05 0E 0C 0E 19 55
+ 81 0A 00 0D 01 04 00 05 0E 0C 0E 19 55
+Socket: 8, pdu_len: 13, addr: 160.91.236.122
+Bytes sent: 13
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+1.001543 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 5) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+1.001514 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 4) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+1.001488 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 3) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+1.001454 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 29) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+1.001424 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 28) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+1.001394 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 27) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+1.001355 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 26) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+1.001326 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 25) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+Registering this InvokeId: 60 to var: 0x9ab5dd8
+
+tagNumber: 0, tagLenValType: 24
+ 00 05 3C 0C 0C 00 00 00 18
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 3C 0C 0C 00 00 00 18 19 55
+ 00 05 3C 0C 0C 00 00 00 18 19 55
+ 01 04 00 05 3C 0C 0C 00 00 00 18 19 55
+ 81 0A 00 11 01 04 00 05 3C 0C 0C 00 00 00 18 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+Registering this InvokeId: 61 to var: 0x9ab5d68
+
+tagNumber: 0, tagLenValType: 23
+ 00 05 3D 0C 0C 00 00 00 17
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 3D 0C 0C 00 00 00 17 19 55
+ 00 05 3D 0C 0C 00 00 00 17 19 55
+ 01 04 00 05 3D 0C 0C 00 00 00 17 19 55
+ 81 0A 00 11 01 04 00 05 3D 0C 0C 00 00 00 17 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+Registering this InvokeId: 62 to var: 0x9ab5cf8
+
+tagNumber: 0, tagLenValType: 22
+ 00 05 3E 0C 0C 00 00 00 16
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 3E 0C 0C 00 00 00 16 19 55
+ 00 05 3E 0C 0C 00 00 00 16 19 55
+ 01 04 00 05 3E 0C 0C 00 00 00 16 19 55
+ 81 0A 00 11 01 04 00 05 3E 0C 0C 00 00 00 16 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+Registering this InvokeId: 63 to var: 0x9ab5c88
+
+tagNumber: 0, tagLenValType: 21
+ 00 05 3F 0C 0C 00 00 00 15
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 3F 0C 0C 00 00 00 15 19 55
+ 00 05 3F 0C 0C 00 00 00 15 19 55
+ 01 04 00 05 3F 0C 0C 00 00 00 15 19 55
+ 81 0A 00 11 01 04 00 05 3F 0C 0C 00 00 00 15 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+Registering this InvokeId: 64 to var: 0x9ab5c18
+
+tagNumber: 0, tagLenValType: 20
+ 00 05 40 0C 0C 00 00 00 14
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 40 0C 0C 00 00 00 14 19 55
+ 00 05 40 0C 0C 00 00 00 14 19 55
+ 01 04 00 05 40 0C 0C 00 00 00 14 19 55
+ 81 0A 00 11 01 04 00 05 40 0C 0C 00 00 00 14 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+Registering this InvokeId: 65 to var: 0x9ab5ba8
+
+tagNumber: 0, tagLenValType: 2
+ 00 05 41 0C 0C 00 00 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 41 0C 0C 00 00 00 02 19 55
+ 00 05 41 0C 0C 00 00 00 02 19 55
+ 01 04 00 05 41 0C 0C 00 00 00 02 19 55
+ 81 0A 00 11 01 04 00 05 41 0C 0C 00 00 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+Registering this InvokeId: 66 to var: 0x9ab5b38
+
+tagNumber: 0, tagLenValType: 19
+ 00 05 42 0C 0C 00 00 00 13
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 42 0C 0C 00 00 00 13 19 55
+ 00 05 42 0C 0C 00 00 00 13 19 55
+ 01 04 00 05 42 0C 0C 00 00 00 13 19 55
+ 81 0A 00 11 01 04 00 05 42 0C 0C 00 00 00 13 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+Registering this InvokeId: 67 to var: 0x9ab5ac8
+
+tagNumber: 0, tagLenValType: 18
+ 00 05 43 0C 0C 00 00 00 12
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 43 0C 0C 00 00 00 12 19 55
+ 00 05 43 0C 0C 00 00 00 12 19 55
+ 01 04 00 05 43 0C 0C 00 00 00 12 19 55
+ 81 0A 00 11 01 04 00 05 43 0C 0C 00 00 00 12 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+Registering this InvokeId: 68 to var: 0x9ab5a58
+
+tagNumber: 0, tagLenValType: 17
+ 00 05 44 0C 0C 00 00 00 11
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 44 0C 0C 00 00 00 11 19 55
+ 00 05 44 0C 0C 00 00 00 11 19 55
+ 01 04 00 05 44 0C 0C 00 00 00 11 19 55
+ 81 0A 00 11 01 04 00 05 44 0C 0C 00 00 00 11 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+Registering this InvokeId: 69 to var: 0x9ab59e8
+
+tagNumber: 0, tagLenValType: 16
+ 00 05 45 0C 0C 00 00 00 10
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 45 0C 0C 00 00 00 10 19 55
+ 00 05 45 0C 0C 00 00 00 10 19 55
+ 01 04 00 05 45 0C 0C 00 00 00 10 19 55
+ 81 0A 00 11 01 04 00 05 45 0C 0C 00 00 00 10 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+3.006323 seconds elapsed
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+3.006296 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (2) to send...
+
+tagNumber: 0, tagLenValType: 14
+ 00 05 22 0C 0C 00 00 00 0E
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 22 0C 0C 00 00 00 0E 19 55
+ 00 05 22 0C 0C 00 00 00 0E 19 55
+ 01 04 00 05 22 0C 0C 00 00 00 0E 19 55
+ 81 0A 00 11 01 04 00 05 22 0C 0C 00 00 00 0E 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+3.006303 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (3) to send...
+
+tagNumber: 0, tagLenValType: 13
+ 00 05 23 0C 0C 00 00 00 0D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 23 0C 0C 00 00 00 0D 19 55
+ 00 05 23 0C 0C 00 00 00 0D 19 55
+ 01 04 00 05 23 0C 0C 00 00 00 0D 19 55
+ 81 0A 00 11 01 04 00 05 23 0C 0C 00 00 00 0D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+3.006309 seconds elapsed
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+3.006281 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (2) to send...
+
+tagNumber: 0, tagLenValType: 11
+ 00 05 25 0C 0C 00 00 00 0B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 25 0C 0C 00 00 00 0B 19 55
+ 00 05 25 0C 0C 00 00 00 0B 19 55
+ 01 04 00 05 25 0C 0C 00 00 00 0B 19 55
+ 81 0A 00 11 01 04 00 05 25 0C 0C 00 00 00 0B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+3.006277 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (3) to send...
+
+tagNumber: 0, tagLenValType: 10
+ 00 05 26 0C 0C 00 00 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 26 0C 0C 00 00 00 0A 19 55
+ 00 05 26 0C 0C 00 00 00 0A 19 55
+ 01 04 00 05 26 0C 0C 00 00 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 26 0C 0C 00 00 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+3.006288 seconds elapsed
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 21 0C 0C 00 00 00 0F 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 33
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 22 0C 0C 00 00 00 0E 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 14
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 23 0C 0C 00 00 00 0D 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 13
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 24 0C 0C 00 00 00 0C 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 36
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 25 0C 0C 00 00 00 0B 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 11
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 26 0C 0C 00 00 00 0A 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 10
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 27 0C 0C 00 00 00 01 19 55
+ 3E 44 3C 23 D7 0A 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 39
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 28 0C 0C 00 C0 00 09 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 9
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 29 0C 0C 00 C0 00 08 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 8
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 2A 0C 0C 00 C0 00 07 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 7
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 2B 0C 0C 00 C0 00 06 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 6
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 2C 0C 0C 00 C0 00 05 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 5
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 2D 0C 0C 00 C0 00 04 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 4
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 2E 0C 0C 00 C0 00 03 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 3
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 2F 0C 0C 00 C0 00 02 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 2
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 30 0C 0C 00 C0 00 0A 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 10
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 31 0C 0C 00 C0 00 01 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 1
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 32 0C 0C 00 00 00 09 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 9
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 33 0C 0C 00 00 00 08 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 8
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 34 0C 0C 00 00 00 05 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 5
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 35 0C 0C 00 00 00 04 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 4
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 36 0C 0C 00 00 00 03 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 3
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 37 0C 0C 00 00 00 1D 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 29
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 38 0C 0C 00 00 00 1C 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 28
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 39 0C 0C 00 00 00 1B 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 27
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 3A 0C 0C 00 00 00 1A 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 26
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 3B 0C 0C 00 00 00 19 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 25
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 3C 0C 0C 00 00 00 18 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 24
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 3D 0C 0C 00 00 00 17 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 23
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 3E 0C 0C 00 00 00 16 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 22
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 3F 0C 0C 00 00 00 15 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 21
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 40 0C 0C 00 00 00 14 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 20
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 41 0C 0C 00 00 00 02 19 55
+ 3E 44 3C A3 D7 0A 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 2
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.020000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 42 0C 0C 00 00 00 13 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 19
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 43 0C 0C 00 00 00 12 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 18
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 44 0C 0C 00 00 00 11 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 17
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 45 0C 0C 00 00 00 10 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 16
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 22 0C 0C 00 00 00 0E 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 34
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 23 0C 0C 00 00 00 0D 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 35
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 25 0C 0C 00 00 00 0B 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 37
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 26 0C 0C 00 00 00 0A 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+Var is invalid. this->invoke_id = 38
+	I am listening for BACNET packets on port: 47808 using socket:8.
+	Nothing yet: -1
+	I am listening for BACNET packets on port: 47808 using socket:8.
+	This device "FieldServer" is unknown; do a "who-is"...
+
+tagNumber: 0, tagLenValType: 11
+
+tagNumber: 1, tagLenValType: 11
+ 81 0B 00 10 01 20 FF FF 00 FE 10 08 09 0B 19 0B
+
+Socket: 8, pdu_len: 16, addr: 160.91.237.255
+Bytes sent: 16
+	Who-is? "FieldServer"... "FieldServer"... "FieldServer"...
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0B 00 18 01 20 FF FF 00 FF 10 00 C4 02 00 00
+ 0B 22 05 B2 91 03 21 25
+
+<<<Message end.
+It is a BVLC_ORIGINAL_BROADCAST_NPDU message...
+
+PDU_TYPE_UNCONFIRMED_SERVICE_REQUEST (10)
+
+SERVICE_UNCONFIRMED_I_AM: (0)
+ 00 C4 02 00 00
+ C4 02 00 00 0B
+ 22 05 B2 91 03
+
+ObjType: 8, Instance: 11
+
+TagNumber: 2, TagClass: 0, TagLVT: 2
+
+UVAL: 1458
+
+TagNumber: 9, TagClass: 0, TagLVT: 1
+
+ENUMVAL: 3
+
+TagNumber: 2, TagClass: 0, TagLVT: 1
+
+VENDOR: 37
+
+Yay... Found a match...
+ A0 5B EC 7A BA C0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+Registering this InvokeId: 70 to var: 0x9ab6730
+
+tagNumber: 0, tagLenValType: 12582921
+ 00 05 46 0C 0C 00 C0 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 46 0C 0C 00 C0 00 09 19 55
+ 00 05 46 0C 0C 00 C0 00 09 19 55
+ 01 04 00 05 46 0C 0C 00 C0 00 09 19 55
+ 81 0A 00 11 01 04 00 05 46 0C 0C 00 C0 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+Registering this InvokeId: 71 to var: 0x9ab66c8
+
+tagNumber: 0, tagLenValType: 12582920
+ 00 05 47 0C 0C 00 C0 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 47 0C 0C 00 C0 00 08 19 55
+ 00 05 47 0C 0C 00 C0 00 08 19 55
+ 01 04 00 05 47 0C 0C 00 C0 00 08 19 55
+ 81 0A 00 11 01 04 00 05 47 0C 0C 00 C0 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+Registering this InvokeId: 72 to var: 0x9ab6660
+
+tagNumber: 0, tagLenValType: 12582919
+ 00 05 48 0C 0C 00 C0 00 07
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 48 0C 0C 00 C0 00 07 19 55
+ 00 05 48 0C 0C 00 C0 00 07 19 55
+ 01 04 00 05 48 0C 0C 00 C0 00 07 19 55
+ 81 0A 00 11 01 04 00 05 48 0C 0C 00 C0 00 07 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+Registering this InvokeId: 73 to var: 0x9ab65f8
+
+tagNumber: 0, tagLenValType: 12582918
+ 00 05 49 0C 0C 00 C0 00 06
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 49 0C 0C 00 C0 00 06 19 55
+ 00 05 49 0C 0C 00 C0 00 06 19 55
+ 01 04 00 05 49 0C 0C 00 C0 00 06 19 55
+ 81 0A 00 11 01 04 00 05 49 0C 0C 00 C0 00 06 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+Registering this InvokeId: 74 to var: 0x9ab6590
+
+tagNumber: 0, tagLenValType: 12582917
+ 00 05 4A 0C 0C 00 C0 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 4A 0C 0C 00 C0 00 05 19 55
+ 00 05 4A 0C 0C 00 C0 00 05 19 55
+ 01 04 00 05 4A 0C 0C 00 C0 00 05 19 55
+ 81 0A 00 11 01 04 00 05 4A 0C 0C 00 C0 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+Registering this InvokeId: 75 to var: 0x9ab6528
+
+tagNumber: 0, tagLenValType: 12582916
+ 00 05 4B 0C 0C 00 C0 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 4B 0C 0C 00 C0 00 04 19 55
+ 00 05 4B 0C 0C 00 C0 00 04 19 55
+ 01 04 00 05 4B 0C 0C 00 C0 00 04 19 55
+ 81 0A 00 11 01 04 00 05 4B 0C 0C 00 C0 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+Registering this InvokeId: 76 to var: 0x9ab64c0
+
+tagNumber: 0, tagLenValType: 12582915
+ 00 05 4C 0C 0C 00 C0 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 4C 0C 0C 00 C0 00 03 19 55
+ 00 05 4C 0C 0C 00 C0 00 03 19 55
+ 01 04 00 05 4C 0C 0C 00 C0 00 03 19 55
+ 81 0A 00 11 01 04 00 05 4C 0C 0C 00 C0 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+Registering this InvokeId: 77 to var: 0x9ab6458
+
+tagNumber: 0, tagLenValType: 12582914
+ 00 05 4D 0C 0C 00 C0 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 4D 0C 0C 00 C0 00 02 19 55
+ 00 05 4D 0C 0C 00 C0 00 02 19 55
+ 01 04 00 05 4D 0C 0C 00 C0 00 02 19 55
+ 81 0A 00 11 01 04 00 05 4D 0C 0C 00 C0 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+Registering this InvokeId: 78 to var: 0x9ab63f0
+
+tagNumber: 0, tagLenValType: 12582922
+ 00 05 4E 0C 0C 00 C0 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 4E 0C 0C 00 C0 00 0A 19 55
+ 00 05 4E 0C 0C 00 C0 00 0A 19 55
+ 01 04 00 05 4E 0C 0C 00 C0 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 4E 0C 0C 00 C0 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+Registering this InvokeId: 79 to var: 0x9ab6388
+
+tagNumber: 0, tagLenValType: 12582913
+ 00 05 4F 0C 0C 00 C0 00 01
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 4F 0C 0C 00 C0 00 01 19 55
+ 00 05 4F 0C 0C 00 C0 00 01 19 55
+ 01 04 00 05 4F 0C 0C 00 C0 00 01 19 55
+ 81 0A 00 11 01 04 00 05 4F 0C 0C 00 C0 00 01 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+Registering this InvokeId: 80 to var: 0x9ab6318
+
+tagNumber: 0, tagLenValType: 9
+ 00 05 50 0C 0C 00 00 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 50 0C 0C 00 00 00 09 19 55
+ 00 05 50 0C 0C 00 00 00 09 19 55
+ 01 04 00 05 50 0C 0C 00 00 00 09 19 55
+ 81 0A 00 11 01 04 00 05 50 0C 0C 00 00 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+Registering this InvokeId: 81 to var: 0x9ab62a8
+
+tagNumber: 0, tagLenValType: 8
+ 00 05 51 0C 0C 00 00 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 51 0C 0C 00 00 00 08 19 55
+ 00 05 51 0C 0C 00 00 00 08 19 55
+ 01 04 00 05 51 0C 0C 00 00 00 08 19 55
+ 81 0A 00 11 01 04 00 05 51 0C 0C 00 00 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+7.013191 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (2) to send...
+
+tagNumber: 0, tagLenValType: 7
+ 00 05 0D 0C 0F
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0D 0C 0F 19 55
+ 00 05 0D 0C 0F 19 55
+ 01 04 00 05 0D 0C 0F 19 55
+ 81 0A 00 0D 01 04 00 05 0D 0C 0F 19 55
+Socket: 8, pdu_len: 13, addr: 160.91.236.122
+Bytes sent: 13
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+7.013144 seconds elapsed
+
+RETRY, RETRY, RETRY...
+
+Retrying (3) to send...
+
+tagNumber: 0, tagLenValType: 6
+ 00 05 0E 0C 0E
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 0E 0C 0E 19 55
+ 00 05 0E 0C 0E 19 55
+ 01 04 00 05 0E 0C 0E 19 55
+ 81 0A 00 0D 01 04 00 05 0E 0C 0E 19 55
+Socket: 8, pdu_len: 13, addr: 160.91.236.122
+Bytes sent: 13
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+Registering this InvokeId: 82 to var: 0x9ab6158
+
+tagNumber: 0, tagLenValType: 5
+ 00 05 52 0C 0C 00 00 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 52 0C 0C 00 00 00 05 19 55
+ 00 05 52 0C 0C 00 00 00 05 19 55
+ 01 04 00 05 52 0C 0C 00 00 00 05 19 55
+ 81 0A 00 11 01 04 00 05 52 0C 0C 00 00 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+Registering this InvokeId: 83 to var: 0x9ab60e8
+
+tagNumber: 0, tagLenValType: 4
+ 00 05 53 0C 0C 00 00 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 53 0C 0C 00 00 00 04 19 55
+ 00 05 53 0C 0C 00 00 00 04 19 55
+ 01 04 00 05 53 0C 0C 00 00 00 04 19 55
+ 81 0A 00 11 01 04 00 05 53 0C 0C 00 00 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+Registering this InvokeId: 84 to var: 0x9ab6078
+
+tagNumber: 0, tagLenValType: 3
+ 00 05 54 0C 0C 00 00 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 54 0C 0C 00 00 00 03 19 55
+ 00 05 54 0C 0C 00 00 00 03 19 55
+ 01 04 00 05 54 0C 0C 00 00 00 03 19 55
+ 81 0A 00 11 01 04 00 05 54 0C 0C 00 00 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+Registering this InvokeId: 85 to var: 0x9ab6008
+
+tagNumber: 0, tagLenValType: 29
+ 00 05 55 0C 0C 00 00 00 1D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 55 0C 0C 00 00 00 1D 19 55
+ 00 05 55 0C 0C 00 00 00 1D 19 55
+ 01 04 00 05 55 0C 0C 00 00 00 1D 19 55
+ 81 0A 00 11 01 04 00 05 55 0C 0C 00 00 00 1D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+Registering this InvokeId: 86 to var: 0x9ab5f98
+
+tagNumber: 0, tagLenValType: 28
+ 00 05 56 0C 0C 00 00 00 1C
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 56 0C 0C 00 00 00 1C 19 55
+ 00 05 56 0C 0C 00 00 00 1C 19 55
+ 01 04 00 05 56 0C 0C 00 00 00 1C 19 55
+ 81 0A 00 11 01 04 00 05 56 0C 0C 00 00 00 1C 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+Registering this InvokeId: 87 to var: 0x9ab5f28
+
+tagNumber: 0, tagLenValType: 27
+ 00 05 57 0C 0C 00 00 00 1B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 57 0C 0C 00 00 00 1B 19 55
+ 00 05 57 0C 0C 00 00 00 1B 19 55
+ 01 04 00 05 57 0C 0C 00 00 00 1B 19 55
+ 81 0A 00 11 01 04 00 05 57 0C 0C 00 00 00 1B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+Registering this InvokeId: 88 to var: 0x9ab5eb8
+
+tagNumber: 0, tagLenValType: 26
+ 00 05 58 0C 0C 00 00 00 1A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 58 0C 0C 00 00 00 1A 19 55
+ 00 05 58 0C 0C 00 00 00 1A 19 55
+ 01 04 00 05 58 0C 0C 00 00 00 1A 19 55
+ 81 0A 00 11 01 04 00 05 58 0C 0C 00 00 00 1A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+Registering this InvokeId: 89 to var: 0x9ab5e48
+
+tagNumber: 0, tagLenValType: 25
+ 00 05 59 0C 0C 00 00 00 19
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 59 0C 0C 00 00 00 19 19 55
+ 00 05 59 0C 0C 00 00 00 19 19 55
+ 01 04 00 05 59 0C 0C 00 00 00 19 19 55
+ 81 0A 00 11 01 04 00 05 59 0C 0C 00 00 00 19 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+Registering this InvokeId: 90 to var: 0x9ab5dd8
+
+tagNumber: 0, tagLenValType: 24
+ 00 05 5A 0C 0C 00 00 00 18
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 5A 0C 0C 00 00 00 18 19 55
+ 00 05 5A 0C 0C 00 00 00 18 19 55
+ 01 04 00 05 5A 0C 0C 00 00 00 18 19 55
+ 81 0A 00 11 01 04 00 05 5A 0C 0C 00 00 00 18 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+Registering this InvokeId: 91 to var: 0x9ab5d68
+
+tagNumber: 0, tagLenValType: 23
+ 00 05 5B 0C 0C 00 00 00 17
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 5B 0C 0C 00 00 00 17 19 55
+ 00 05 5B 0C 0C 00 00 00 17 19 55
+ 01 04 00 05 5B 0C 0C 00 00 00 17 19 55
+ 81 0A 00 11 01 04 00 05 5B 0C 0C 00 00 00 17 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+Registering this InvokeId: 92 to var: 0x9ab5cf8
+
+tagNumber: 0, tagLenValType: 22
+ 00 05 5C 0C 0C 00 00 00 16
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 5C 0C 0C 00 00 00 16 19 55
+ 00 05 5C 0C 0C 00 00 00 16 19 55
+ 01 04 00 05 5C 0C 0C 00 00 00 16 19 55
+ 81 0A 00 11 01 04 00 05 5C 0C 0C 00 00 00 16 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+Registering this InvokeId: 93 to var: 0x9ab5c88
+
+tagNumber: 0, tagLenValType: 21
+ 00 05 5D 0C 0C 00 00 00 15
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 5D 0C 0C 00 00 00 15 19 55
+ 00 05 5D 0C 0C 00 00 00 15 19 55
+ 01 04 00 05 5D 0C 0C 00 00 00 15 19 55
+ 81 0A 00 11 01 04 00 05 5D 0C 0C 00 00 00 15 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+Registering this InvokeId: 94 to var: 0x9ab5c18
+
+tagNumber: 0, tagLenValType: 20
+ 00 05 5E 0C 0C 00 00 00 14
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 5E 0C 0C 00 00 00 14 19 55
+ 00 05 5E 0C 0C 00 00 00 14 19 55
+ 01 04 00 05 5E 0C 0C 00 00 00 14 19 55
+ 81 0A 00 11 01 04 00 05 5E 0C 0C 00 00 00 14 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+Registering this InvokeId: 95 to var: 0x9ab5ba8
+
+tagNumber: 0, tagLenValType: 2
+ 00 05 5F 0C 0C 00 00 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 5F 0C 0C 00 00 00 02 19 55
+ 00 05 5F 0C 0C 00 00 00 02 19 55
+ 01 04 00 05 5F 0C 0C 00 00 00 02 19 55
+ 81 0A 00 11 01 04 00 05 5F 0C 0C 00 00 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+Registering this InvokeId: 96 to var: 0x9ab5b38
+
+tagNumber: 0, tagLenValType: 19
+ 00 05 60 0C 0C 00 00 00 13
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 60 0C 0C 00 00 00 13 19 55
+ 00 05 60 0C 0C 00 00 00 13 19 55
+ 01 04 00 05 60 0C 0C 00 00 00 13 19 55
+ 81 0A 00 11 01 04 00 05 60 0C 0C 00 00 00 13 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+Registering this InvokeId: 97 to var: 0x9ab5ac8
+
+tagNumber: 0, tagLenValType: 18
+ 00 05 61 0C 0C 00 00 00 12
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 61 0C 0C 00 00 00 12 19 55
+ 00 05 61 0C 0C 00 00 00 12 19 55
+ 01 04 00 05 61 0C 0C 00 00 00 12 19 55
+ 81 0A 00 11 01 04 00 05 61 0C 0C 00 00 00 12 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+Registering this InvokeId: 98 to var: 0x9ab5a58
+
+tagNumber: 0, tagLenValType: 17
+ 00 05 62 0C 0C 00 00 00 11
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 62 0C 0C 00 00 00 11 19 55
+ 00 05 62 0C 0C 00 00 00 11 19 55
+ 01 04 00 05 62 0C 0C 00 00 00 11 19 55
+ 81 0A 00 11 01 04 00 05 62 0C 0C 00 00 00 11 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+Registering this InvokeId: 99 to var: 0x9ab59e8
+
+tagNumber: 0, tagLenValType: 16
+ 00 05 63 0C 0C 00 00 00 10
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 63 0C 0C 00 00 00 10 19 55
+ 00 05 63 0C 0C 00 00 00 10 19 55
+ 01 04 00 05 63 0C 0C 00 00 00 10 19 55
+ 81 0A 00 11 01 04 00 05 63 0C 0C 00 00 00 10 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+Registering this InvokeId: 100 to var: 0x9ab5978
+
+tagNumber: 0, tagLenValType: 15
+ 00 05 64 0C 0C 00 00 00 0F
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 64 0C 0C 00 00 00 0F 19 55
+ 00 05 64 0C 0C 00 00 00 0F 19 55
+ 01 04 00 05 64 0C 0C 00 00 00 0F 19 55
+ 81 0A 00 11 01 04 00 05 64 0C 0C 00 00 00 0F 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+Registering this InvokeId: 101 to var: 0x9ab5908
+
+tagNumber: 0, tagLenValType: 14
+ 00 05 65 0C 0C 00 00 00 0E
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 65 0C 0C 00 00 00 0E 19 55
+ 00 05 65 0C 0C 00 00 00 0E 19 55
+ 01 04 00 05 65 0C 0C 00 00 00 0E 19 55
+ 81 0A 00 11 01 04 00 05 65 0C 0C 00 00 00 0E 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+Registering this InvokeId: 102 to var: 0x9ab5898
+
+tagNumber: 0, tagLenValType: 13
+ 00 05 66 0C 0C 00 00 00 0D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 66 0C 0C 00 00 00 0D 19 55
+ 00 05 66 0C 0C 00 00 00 0D 19 55
+ 01 04 00 05 66 0C 0C 00 00 00 0D 19 55
+ 81 0A 00 11 01 04 00 05 66 0C 0C 00 00 00 0D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+Registering this InvokeId: 103 to var: 0x9ab5828
+
+tagNumber: 0, tagLenValType: 12
+ 00 05 67 0C 0C 00 00 00 0C
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 67 0C 0C 00 00 00 0C 19 55
+ 00 05 67 0C 0C 00 00 00 0C 19 55
+ 01 04 00 05 67 0C 0C 00 00 00 0C 19 55
+ 81 0A 00 11 01 04 00 05 67 0C 0C 00 00 00 0C 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+Registering this InvokeId: 104 to var: 0x9ab57b8
+
+tagNumber: 0, tagLenValType: 11
+ 00 05 68 0C 0C 00 00 00 0B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 68 0C 0C 00 00 00 0B 19 55
+ 00 05 68 0C 0C 00 00 00 0B 19 55
+ 01 04 00 05 68 0C 0C 00 00 00 0B 19 55
+ 81 0A 00 11 01 04 00 05 68 0C 0C 00 00 00 0B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+Registering this InvokeId: 105 to var: 0x9ab5748
+
+tagNumber: 0, tagLenValType: 10
+ 00 05 69 0C 0C 00 00 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 69 0C 0C 00 00 00 0A 19 55
+ 00 05 69 0C 0C 00 00 00 0A 19 55
+ 01 04 00 05 69 0C 0C 00 00 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 69 0C 0C 00 00 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+Registering this InvokeId: 106 to var: 0x9ab56d8
+
+tagNumber: 0, tagLenValType: 1
+ 00 05 6A 0C 0C 00 00 00 01
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 6A 0C 0C 00 00 00 01 19 55
+ 00 05 6A 0C 0C 00 00 00 01 19 55
+ 01 04 00 05 6A 0C 0C 00 00 00 01 19 55
+ 81 0A 00 11 01 04 00 05 6A 0C 0C 00 00 00 01 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 46 0C 0C 00 C0 00 09 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 9
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 47 0C 0C 00 C0 00 08 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 8
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 48 0C 0C 00 C0 00 07 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 7
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+e	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 49 0C 0C 00 C0 00 06 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 6
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 4A 0C 0C 00 C0 00 05 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 5
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 4B 0C 0C 00 C0 00 04 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 4
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 4C 0C 0C 00 C0 00 03 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 3
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+x	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 4D 0C 0C 00 C0 00 02 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 2
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 4E 0C 0C 00 C0 00 0A 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 10
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+i	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 14 01 00 30 4F 0C 0C 00 C0 00 01 19 55
+ 3E 91 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 3, this->object_id.instance: 1
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_ENUMERATED
+
+Value: 0
+t	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+Registering this InvokeId: 107 to var: 0x9ab6730
+
+tagNumber: 0, tagLenValType: 12582921
+ 00 05 6B 0C 0C 00 C0 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 6B 0C 0C 00 C0 00 09 19 55
+ 00 05 6B 0C 0C 00 C0 00 09 19 55
+ 01 04 00 05 6B 0C 0C 00 C0 00 09 19 55
+ 81 0A 00 11 01 04 00 05 6B 0C 0C 00 C0 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+Registering this InvokeId: 108 to var: 0x9ab66c8
+
+tagNumber: 0, tagLenValType: 12582920
+ 00 05 6C 0C 0C 00 C0 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 6C 0C 0C 00 C0 00 08 19 55
+ 00 05 6C 0C 0C 00 C0 00 08 19 55
+ 01 04 00 05 6C 0C 0C 00 C0 00 08 19 55
+ 81 0A 00 11 01 04 00 05 6C 0C 0C 00 C0 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+Registering this InvokeId: 109 to var: 0x9ab6660
+
+tagNumber: 0, tagLenValType: 12582919
+ 00 05 6D 0C 0C 00 C0 00 07
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 6D 0C 0C 00 C0 00 07 19 55
+ 00 05 6D 0C 0C 00 C0 00 07 19 55
+ 01 04 00 05 6D 0C 0C 00 C0 00 07 19 55
+ 81 0A 00 11 01 04 00 05 6D 0C 0C 00 C0 00 07 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+Registering this InvokeId: 110 to var: 0x9ab65f8
+
+tagNumber: 0, tagLenValType: 12582918
+ 00 05 6E 0C 0C 00 C0 00 06
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 6E 0C 0C 00 C0 00 06 19 55
+ 00 05 6E 0C 0C 00 C0 00 06 19 55
+ 01 04 00 05 6E 0C 0C 00 C0 00 06 19 55
+ 81 0A 00 11 01 04 00 05 6E 0C 0C 00 C0 00 06 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+Registering this InvokeId: 111 to var: 0x9ab6590
+
+tagNumber: 0, tagLenValType: 12582917
+ 00 05 6F 0C 0C 00 C0 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 6F 0C 0C 00 C0 00 05 19 55
+ 00 05 6F 0C 0C 00 C0 00 05 19 55
+ 01 04 00 05 6F 0C 0C 00 C0 00 05 19 55
+ 81 0A 00 11 01 04 00 05 6F 0C 0C 00 C0 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+Registering this InvokeId: 112 to var: 0x9ab6528
+
+tagNumber: 0, tagLenValType: 12582916
+ 00 05 70 0C 0C 00 C0 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 70 0C 0C 00 C0 00 04 19 55
+ 00 05 70 0C 0C 00 C0 00 04 19 55
+ 01 04 00 05 70 0C 0C 00 C0 00 04 19 55
+ 81 0A 00 11 01 04 00 05 70 0C 0C 00 C0 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+Registering this InvokeId: 113 to var: 0x9ab64c0
+
+tagNumber: 0, tagLenValType: 12582915
+ 00 05 71 0C 0C 00 C0 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 71 0C 0C 00 C0 00 03 19 55
+ 00 05 71 0C 0C 00 C0 00 03 19 55
+ 01 04 00 05 71 0C 0C 00 C0 00 03 19 55
+ 81 0A 00 11 01 04 00 05 71 0C 0C 00 C0 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+Registering this InvokeId: 114 to var: 0x9ab6458
+
+tagNumber: 0, tagLenValType: 12582914
+ 00 05 72 0C 0C 00 C0 00 02
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 72 0C 0C 00 C0 00 02 19 55
+ 00 05 72 0C 0C 00 C0 00 02 19 55
+ 01 04 00 05 72 0C 0C 00 C0 00 02 19 55
+ 81 0A 00 11 01 04 00 05 72 0C 0C 00 C0 00 02 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+Registering this InvokeId: 115 to var: 0x9ab63f0
+
+tagNumber: 0, tagLenValType: 12582922
+ 00 05 73 0C 0C 00 C0 00 0A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 73 0C 0C 00 C0 00 0A 19 55
+ 00 05 73 0C 0C 00 C0 00 0A 19 55
+ 01 04 00 05 73 0C 0C 00 C0 00 0A 19 55
+ 81 0A 00 11 01 04 00 05 73 0C 0C 00 C0 00 0A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+Registering this InvokeId: 116 to var: 0x9ab6388
+
+tagNumber: 0, tagLenValType: 12582913
+ 00 05 74 0C 0C 00 C0 00 01
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 74 0C 0C 00 C0 00 01 19 55
+ 00 05 74 0C 0C 00 C0 00 01 19 55
+ 01 04 00 05 74 0C 0C 00 C0 00 01 19 55
+ 81 0A 00 11 01 04 00 05 74 0C 0C 00 C0 00 01 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+1.002797 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 9) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+1.002767 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 8) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+1.002728 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+1.002696 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+1.002672 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 5) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+1.002645 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 4) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+1.002611 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 3) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+1.002577 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 29) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+1.002543 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 28) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+1.002514 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 27) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+1.002475 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 26) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+1.002447 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 25) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+1.002418 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 24) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+1.002385 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 23) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+1.002355 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 22) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+1.002316 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 21) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+1.002283 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 20) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+1.002255 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+1.002222 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 19) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+1.002188 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 18) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+1.002154 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 17) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+1.002132 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 16) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+1.002094 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 15) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+1.002066 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 14) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+1.002036 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 13) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+1.002004 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 12) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+1.001974 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 11) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+1.001941 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+1.001908 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 1) is late... Can't wait forever...
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 50 0C 0C 00 00 00 09 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 9
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 51 0C 0C 00 00 00 08 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 8
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 52 0C 0C 00 00 00 05 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 5
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 53 0C 0C 00 00 00 04 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 4
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 54 0C 0C 00 00 00 03 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 3
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 55 0C 0C 00 00 00 1D 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 29
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 56 0C 0C 00 00 00 1C 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 28
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 57 0C 0C 00 00 00 1B 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 27
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 58 0C 0C 00 00 00 1A 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 26
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 59 0C 0C 00 00 00 19 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 25
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000
+	This device is known: FieldServer A0:5B:EC:7A:BA:C0
+	I (FieldServer) should be scanning this 3, 9, 85 right now.
+
+1.001634 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 9) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 8, 85 right now.
+
+1.001555 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 8) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 7, 85 right now.
+
+1.001507 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 6, 85 right now.
+
+1.001483 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 5, 85 right now.
+
+1.001456 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 5) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 4, 85 right now.
+
+1.001425 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 4) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 3, 85 right now.
+
+1.001397 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 3) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 2, 85 right now.
+
+1.001368 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 10, 85 right now.
+
+1.001339 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 3, 1, 85 right now.
+
+1.001315 seconds elapsed
+
+Hello... device(FieldServer), Variable(3, 1) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 9, 85 right now.
+
+Registering this InvokeId: 117 to var: 0x9ab6318
+
+tagNumber: 0, tagLenValType: 9
+ 00 05 75 0C 0C 00 00 00 09
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 75 0C 0C 00 00 00 09 19 55
+ 00 05 75 0C 0C 00 00 00 09 19 55
+ 01 04 00 05 75 0C 0C 00 00 00 09 19 55
+ 81 0A 00 11 01 04 00 05 75 0C 0C 00 00 00 09 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 8, 85 right now.
+
+Registering this InvokeId: 118 to var: 0x9ab62a8
+
+tagNumber: 0, tagLenValType: 8
+ 00 05 76 0C 0C 00 00 00 08
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 76 0C 0C 00 00 00 08 19 55
+ 00 05 76 0C 0C 00 00 00 08 19 55
+ 01 04 00 05 76 0C 0C 00 00 00 08 19 55
+ 81 0A 00 11 01 04 00 05 76 0C 0C 00 00 00 08 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 7, 85 right now.
+
+2.004121 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 7) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 6, 85 right now.
+
+2.004090 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 6) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 5, 85 right now.
+
+Registering this InvokeId: 119 to var: 0x9ab6158
+
+tagNumber: 0, tagLenValType: 5
+ 00 05 77 0C 0C 00 00 00 05
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 77 0C 0C 00 00 00 05 19 55
+ 00 05 77 0C 0C 00 00 00 05 19 55
+ 01 04 00 05 77 0C 0C 00 00 00 05 19 55
+ 81 0A 00 11 01 04 00 05 77 0C 0C 00 00 00 05 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 4, 85 right now.
+
+Registering this InvokeId: 120 to var: 0x9ab60e8
+
+tagNumber: 0, tagLenValType: 4
+ 00 05 78 0C 0C 00 00 00 04
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 78 0C 0C 00 00 00 04 19 55
+ 00 05 78 0C 0C 00 00 00 04 19 55
+ 01 04 00 05 78 0C 0C 00 00 00 04 19 55
+ 81 0A 00 11 01 04 00 05 78 0C 0C 00 00 00 04 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 3, 85 right now.
+
+Registering this InvokeId: 121 to var: 0x9ab6078
+
+tagNumber: 0, tagLenValType: 3
+ 00 05 79 0C 0C 00 00 00 03
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 79 0C 0C 00 00 00 03 19 55
+ 00 05 79 0C 0C 00 00 00 03 19 55
+ 01 04 00 05 79 0C 0C 00 00 00 03 19 55
+ 81 0A 00 11 01 04 00 05 79 0C 0C 00 00 00 03 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 29, 85 right now.
+
+Registering this InvokeId: 122 to var: 0x9ab6008
+
+tagNumber: 0, tagLenValType: 29
+ 00 05 7A 0C 0C 00 00 00 1D
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 7A 0C 0C 00 00 00 1D 19 55
+ 00 05 7A 0C 0C 00 00 00 1D 19 55
+ 01 04 00 05 7A 0C 0C 00 00 00 1D 19 55
+ 81 0A 00 11 01 04 00 05 7A 0C 0C 00 00 00 1D 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 28, 85 right now.
+
+Registering this InvokeId: 123 to var: 0x9ab5f98
+
+tagNumber: 0, tagLenValType: 28
+ 00 05 7B 0C 0C 00 00 00 1C
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 7B 0C 0C 00 00 00 1C 19 55
+ 00 05 7B 0C 0C 00 00 00 1C 19 55
+ 01 04 00 05 7B 0C 0C 00 00 00 1C 19 55
+ 81 0A 00 11 01 04 00 05 7B 0C 0C 00 00 00 1C 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 27, 85 right now.
+
+Registering this InvokeId: 124 to var: 0x9ab5f28
+
+tagNumber: 0, tagLenValType: 27
+ 00 05 7C 0C 0C 00 00 00 1B
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 7C 0C 0C 00 00 00 1B 19 55
+ 00 05 7C 0C 0C 00 00 00 1B 19 55
+ 01 04 00 05 7C 0C 0C 00 00 00 1B 19 55
+ 81 0A 00 11 01 04 00 05 7C 0C 0C 00 00 00 1B 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 26, 85 right now.
+
+Registering this InvokeId: 125 to var: 0x9ab5eb8
+
+tagNumber: 0, tagLenValType: 26
+ 00 05 7D 0C 0C 00 00 00 1A
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 7D 0C 0C 00 00 00 1A 19 55
+ 00 05 7D 0C 0C 00 00 00 1A 19 55
+ 01 04 00 05 7D 0C 0C 00 00 00 1A 19 55
+ 81 0A 00 11 01 04 00 05 7D 0C 0C 00 00 00 1A 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 25, 85 right now.
+
+Registering this InvokeId: 126 to var: 0x9ab5e48
+
+tagNumber: 0, tagLenValType: 25
+ 00 05 7E 0C 0C 00 00 00 19
+
+tagNumber: 1, tagLenValType: 85
+ 00 05 7E 0C 0C 00 00 00 19 19 55
+ 00 05 7E 0C 0C 00 00 00 19 19 55
+ 01 04 00 05 7E 0C 0C 00 00 00 19 19 55
+ 81 0A 00 11 01 04 00 05 7E 0C 0C 00 00 00 19 19
+ 55
+Socket: 8, pdu_len: 17, addr: 160.91.236.122
+Bytes sent: 17
+	I (FieldServer) should be scanning this 0, 24, 85 right now.
+
+2.004054 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 24) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 23, 85 right now.
+
+2.004022 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 23) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 22, 85 right now.
+
+2.003994 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 22) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 21, 85 right now.
+
+2.003956 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 21) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 20, 85 right now.
+
+2.003923 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 20) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 2, 85 right now.
+
+2.003897 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 2) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 19, 85 right now.
+
+2.003863 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 19) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 18, 85 right now.
+
+2.003830 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 18) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 17, 85 right now.
+
+2.003798 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 17) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 16, 85 right now.
+
+2.003769 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 16) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 15, 85 right now.
+
+2.003731 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 15) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 14, 85 right now.
+
+2.003701 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 14) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 13, 85 right now.
+
+2.003671 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 13) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 12, 85 right now.
+
+2.003638 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 12) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 11, 85 right now.
+
+2.003608 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 11) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 10, 85 right now.
+
+2.003578 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 10) is late... Can't wait forever...
+	I (FieldServer) should be scanning this 0, 1, 85 right now.
+
+2.003545 seconds elapsed
+
+Hello... device(FieldServer), Variable(0, 1) is late... Can't wait forever...
+	I am listening for BACNET packets on port: 47808 using socket:8.
+
+Message received from: 160.91.236.122
+
+Message start in "RAW_HEX:">>>
+ 81 0A 00 17 01 00 30 5A 0C 0C 00 00 00 18 19 55
+ 3E 44 00 00 00 00 3F
+
+<<<Message end.
+It is a BVLC_ORIGINAL_UNICAST_NPDU message...
+
+PDU_TYPE_COMPLEX_ACK PDU type: 30
+
+MATCH (IP): FieldServer
+
+SERVICE_CONFIRMED_READ_PROPERTY PDU type: C
+
+this->object_id.type: 0, this->object_id.instance: 24
+
+this->property_id: 85
+Data type: BACNET_APPLICATION_TAG_REAL
+
+Value: 0.000000

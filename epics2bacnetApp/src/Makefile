@@ -7,24 +7,8 @@ include $(TOP)/configure/CONFIG
 # No optimization, we want debugging info:
 HOST_OPT=NO
 CROSS_OPT=NO
-#=============================
-# Build the IOC application
-
-PROD_IOC = epics2bacnet
-# epics2bacnet.dbd will be created and installed
-DBD += epics2bacnet.dbd
-
-# epics2bacnet.dbd will be made up from these files:
-epics2bacnet_DBD += base.dbd
-
-# Include dbd files from all support applications:
-epics2bacnet_DBD += xxx.dbd
-
-# Add all the support libraries needed by this IOC
-#epics2bacnet_LIBS += xxx
 
 LIBRARY += bacnetlib
-bacnetlib_SRCS += epics2bacnet_registerRecordDeviceDriver.cpp
 
 bacnetlib_SRCS += BacNetApplicationValue.cpp
 bacnetlib_SRCS += BacNetServer.cpp
@@ -65,26 +49,12 @@ bacnetlib_SRCS += BacNetError.cpp
 bacnetlib_SRCS += BacNetEnumToString.cpp
 bacnetlib_SRCS += indtext.c
 
-# epics2bacnet_registerRecordDeviceDriver.cpp derives from epics2bacnet.dbd
-epics2bacnet_SRCS += epics2bacnet_registerRecordDeviceDriver.cpp
-
-
-# Build the main IOC entry point on workstation OSs.
-epics2bacnet_SRCS_DEFAULT += epics2bacnetMain.cpp
-epics2bacnet_SRCS_vxWorks += -nil-
-
-# Add support from base/src/vxWorks if needed
-#epics2bacnet_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
-
-# Finally link to the EPICS Base libraries
-epics2bacnet_LIBS += $(EPICS_BASE_IOC_LIBS)
-epics2bacnet_LIBS += bacnetlib
 
 # Buid a test to test the whole driver whithout using EPICS.
-PROD_HOST += bacnet_test
-bacnet_test_LIBS += $(EPICS_BASE_IOC_LIBS)
-bacnet_test_SRCS += BacNetTestMain.cpp
-bacnet_test_LIBS += bacnetlib
+#PROD_HOST += bacnet_test
+#bacnet_test_LIBS += $(EPICS_BASE_IOC_LIBS)
+#bacnet_test_SRCS += BacNetTestMain.cpp
+#bacnet_test_LIBS += bacnetlib
 
 # Test all of the sources...
 
@@ -108,11 +78,11 @@ bacnet_test_LIBS += bacnetlib
 #bacnet_enumToString_test_LIBS += bacnetlib
 #bacnet_enumToString_test_SRCS += BacNetEnumToStringTestMain.cpp
 
-PROD_HOST += bacnet_whoIs_test
-bacnet_whoIs_test_LIBS += $(EPICS_BASE_IOC_LIBS)
-bacnet_whoIs_test_LIBS += bacnetlib
-bacnet_whoIs_test_SRCS += BacNetWhoIsTestServer.cpp
-bacnet_whoIs_test_SRCS += BacNetWhoIsTestMain.cpp
+#PROD_HOST += bacnet_whoIs_test
+#bacnet_whoIs_test_LIBS += $(EPICS_BASE_IOC_LIBS)
+#bacnet_whoIs_test_LIBS += bacnetlib
+#bacnet_whoIs_test_SRCS += BacNetWhoIsTestServer.cpp
+#bacnet_whoIs_test_SRCS += BacNetWhoIsTestMain.cpp
 
 #PROD_HOST += bacnet_cov_test
 #bacnet_cov_test_LIBS += $(EPICS_BASE_IOC_LIBS)
