@@ -1,3 +1,10 @@
+R0.8-0.2.0              Marcio Donadio - 2017-11-03
+                        - Removed ioc directory with makeBaseApp.pl defaults.
+                          It was not being used.
+                        - Added linuxRT-x86_64 as architecture to be built
+                        - Changes necessary to use the Area Detector structure, 
+                          separating module from IOC apps
+
 R0.8-0.1.0		Marcio Donadio - 2017-11-03
 			- Started from community version R0.8
 			- Removed eclipse hidden files
