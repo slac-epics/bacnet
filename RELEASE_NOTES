@@ -1,3 +1,7 @@
+R0.8-0.3.0              Marcio Donadio - 2017-11-14
+                        - xxx.dbd renamed to bacnetSupport.dbd and moved from
+			  IOC example app to the module.
+
 R0.8-0.2.0              Marcio Donadio - 2017-11-03
                         - Removed ioc directory with makeBaseApp.pl defaults.
                           It was not being used.
