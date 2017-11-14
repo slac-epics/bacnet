@@ -1,9 +1,0 @@
-
-device(ai,INST_IO,devAiBacNet,"BacNet")
-device(ao,INST_IO,devAoBacNet,"BacNet")
-device(bo,INST_IO,devBoBacNet,"BacNet")
-device(bi,INST_IO,devBiBacNet,"BacNet")
-device(mbbi,INST_IO,devMbbiBacNet,"BacNet")
-device(stringin,INST_IO,devStringInBacNet,"BacNet")
-
-registrar(drvbacnetRegister)

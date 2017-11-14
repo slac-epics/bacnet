@@ -8,6 +8,8 @@ include $(TOP)/configure/CONFIG
 HOST_OPT=NO
 CROSS_OPT=NO
 
+DBD += bacnetSupport.dbd
+
 LIBRARY += bacnetlib
 
 bacnetlib_SRCS += BacNetApplicationValue.cpp

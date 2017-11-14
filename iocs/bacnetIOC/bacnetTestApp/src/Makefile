@@ -28,7 +28,7 @@ DBD += $(PROD_NAME).dbd
 $(PROD_NAME)_DBD += base.dbd
 
 # Include dbd files from all support modules:
-$(PROD_NAME)_DBD += xxx.dbd
+$(PROD_NAME)_DBD += bacnetSupport.dbd
 
 # Add all the support libraries needed by this IOC
 $(PROD_NAME)_LIBS += bacnetlib

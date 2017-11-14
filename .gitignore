@@ -15,3 +15,4 @@ auto_positions.sav*
 core.*
 build*.log*
 RELEASE_SITE
+startup/
