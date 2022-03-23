@@ -323,7 +323,7 @@ bool BacNetVariable::process(class BacNetConnection *con, class BacNetDevice *de
 			if(verbosity_level_3(verbosity_level))
 				buffer->hexdump(buffer->getPointerToBuffer(), buffer->getLength());
 
-			int rv = con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
+			//int rv = con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
 			//printf("rv=%d", rv);
 		}
 	}
@@ -436,5 +436,5 @@ void BacNetVariable::retry(class BacNetBuffer *buffer, class BacNetConnection *c
 
 	// mdunning 10/19/17 comment out hexdump below
 	//buffer->hexdump(buffer->getPointerToBuffer(), buffer->getLength());
-	int nbytes = con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
+	con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
 }

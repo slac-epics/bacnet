@@ -261,9 +261,6 @@ uint8_t *BacNetBuffer::decode_bacnet_boolean(uint8_t *pdu, bool *uValue, uint32_
 
 uint8_t *BacNetBuffer::decode_bacnet_character_string(uint8_t *pdu, char *stringValue, uint32_t len)
 {
-	uint8_t *p;
-	p = (pdu + len);
-
 	/** This is the character-set code used. I only support 0x00 (ANSI X3.4)*/
 	if(*pdu == 0x00)
 	{

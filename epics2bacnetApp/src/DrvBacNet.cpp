@@ -123,8 +123,8 @@ void DrvBacNet::start(double period) {
 
 void DrvBacNet::thread_main(void *parm)
 {
-	timeval driverStart;
-	timeval driverNow;
+	//timeval driverStart;
+	//timeval driverNow;
 
 	/** Instantiate a new connection...*/
 	BacNetConnection *con = new BacNetConnection(port, DrvBacNet::ifname);
@@ -132,13 +132,14 @@ void DrvBacNet::thread_main(void *parm)
 	con->connect();
 
 	/** BacNetServer listens all the time for incoming BACnet messages...*/
-	BacNetServer *srvr = new BacNetServer(con, 1, "BACSERVER", DrvBacNet::getBacNetDevices());
+	//BacNetServer *srvr = new BacNetServer(con, 1, "BACSERVER", DrvBacNet::getBacNetDevices());
+	new BacNetServer(con, 1, "BACSERVER", DrvBacNet::getBacNetDevices());
 
 	printf("Bacnet Driver Thread started\n");
 	while (true)
 	{
 		BacNetDevice *dev = bacnet_device;
-		gettimeofday(&driverStart, NULL);
+		//gettimeofday(&driverStart, NULL);
 		while(dev) {
 			dev->lock();
 			dev->scanBacNetVariables(con);
@@ -148,10 +149,11 @@ void DrvBacNet::thread_main(void *parm)
 
 		// Delay until next scan
 		epicsThreadSleep(period);
-		gettimeofday(&driverNow, NULL);
-		double t1 = driverStart.tv_sec+(driverStart.tv_usec/1000000.0);
-		double t2 = driverNow.tv_sec+(driverNow.tv_usec/1000000.0);
-		double tdiff = t2-t1;
+		
+        //gettimeofday(&driverNow, NULL);
+		//double t1 = driverStart.tv_sec+(driverStart.tv_usec/1000000.0);
+		//double t2 = driverNow.tv_sec+(driverNow.tv_usec/1000000.0);
+		//double tdiff = t2-t1;
 		//printf("\nDriver Time: %.6lf\n", tdiff);
 	}
 }

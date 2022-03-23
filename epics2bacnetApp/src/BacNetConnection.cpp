@@ -157,7 +157,6 @@ int BacNetConnection::sendTo(class BacNetDevice *dev, uint8_t *pdu, int pdu_len,
 	int bytes_sent = 0;
 
 	struct sockaddr_in dest;
-	int rv;
 	int sockopt = 0;
 
 	dest.sin_family = AF_INET;
@@ -166,12 +165,12 @@ int BacNetConnection::sendTo(class BacNetDevice *dev, uint8_t *pdu, int pdu_len,
 	if(m == BROADCAST){
 		dest.sin_addr = this->iocBroadcastAddr;
 		sockopt = 1;
-		rv = setsockopt(conSocket, SOL_SOCKET, SO_BROADCAST, (void *) &sockopt, sizeof(sockopt));
+		setsockopt(conSocket, SOL_SOCKET, SO_BROADCAST, (void *) &sockopt, sizeof(sockopt));
 	}
 	else{
 		dev->getDeviceIP(&dest);
 		sockopt = 0;
-		rv = setsockopt(conSocket, SOL_SOCKET, SO_BROADCAST, (void *) &sockopt, sizeof(sockopt));
+		setsockopt(conSocket, SOL_SOCKET, SO_BROADCAST, (void *) &sockopt, sizeof(sockopt));
 	}
 
 	if(verbosity_level_3(verbosity_level))
