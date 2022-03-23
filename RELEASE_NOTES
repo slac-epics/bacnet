@@ -1,3 +1,9 @@
+# Release notes for bacnet module
+
+R0.8-0.3.1  23-Mar-2022  M. Dunning (mdunning)
+    Reduce debug message printing
+
+
 R0.8-0.3.0              Marcio Donadio - 2017-11-14
                         - xxx.dbd renamed to bacnetSupport.dbd and moved from
 			  IOC example app to the module.

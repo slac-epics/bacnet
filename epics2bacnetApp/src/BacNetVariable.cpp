@@ -349,7 +349,9 @@ bool BacNetVariable::process(class BacNetConnection *con, class BacNetDevice *de
 				dev->set_isKnown(false);
 				this->setIsValid(false);
 				// TODO Increment some sort of network statistics counter...
-				printf("\nVariable timeout...(%s, %u, %u)\n", dev->getName(), this->getObjectType(), this->getObject_instance());
+                if(verbosity_level_2(verbosity_level)) {
+				    printf("\nVariable timeout...(%s, %u, %u)\n", dev->getName(), this->getObjectType(), this->getObject_instance());
+                }
 			}
 			else {
 				/** Re-send the message...*/

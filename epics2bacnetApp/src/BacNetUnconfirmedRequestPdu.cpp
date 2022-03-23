@@ -42,7 +42,8 @@ BacNetBuffer *BacNetUnconfirmedRequestPdu::decode_unconfirmed_request(class BacN
 				dev->set_isKnown(true);
 				if(bvlc->get_bvlc_function() == BVLC_FORWARDED_NPDU){
 					dev->setDevMac(bvlc->get_bvlc_forward_addr(), 6);
-					dev->printDevMac();
+				    if(verbosity_level_3(verbosity_level))
+					    dev->printDevMac();
 				}
 				else{
 					uint8_t tmpmac[6];

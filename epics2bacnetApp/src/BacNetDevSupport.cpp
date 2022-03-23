@@ -193,7 +193,7 @@ static const char *parseInputLink(char *link, char **deviceName, uint32_t *objTy
 
 		*covArg = new BacNetCOV((uint32_t)strtoul(_cov, NULL, 0));
 		(*covArg)->printfInfo();
-		printf("\nLifetime: %d\n", (*covArg)->getLife_time());
+		//printf("\nLifetime: %d\n", (*covArg)->getLife_time());
 		//covArg->type = COV;
 		//covArg->lifetime = (uint32_t)strtoul(cov, NULL, 0);
 		free(_cov);
@@ -245,11 +245,11 @@ static const char *parseInputLink(char *link, char **deviceName, uint32_t *objTy
 	if(w_priority)
 		*priority = strtoul(w_priority, NULL, 0);
 
-	printf("\ndevName: %s, object_type: %s, object_instance: %s, property_id: %s, array_index: %s, write_priority: %s\n",
-			devName, o_type, o_instance, p_id, o_index, w_priority);
+	//printf("\ndevName: %s, object_type: %s, object_instance: %s, property_id: %s, array_index: %s, write_priority: %s\n",
+	//		devName, o_type, o_instance, p_id, o_index, w_priority);
 
-	printf("\ndevName: %s, object_type: %u, object_instance: %u, property_id: %u, array_index: %d, write_priority: %u\n",
-			*deviceName, *objType, *objInstance, *propertyId, *objectArrayIndex, *priority);
+	//printf("\ndevName: %s, object_type: %u, object_instance: %u, property_id: %u, array_index: %d, write_priority: %u\n",
+	//		*deviceName, *objType, *objInstance, *propertyId, *objectArrayIndex, *priority);
 
 	if(o_type)
 		free(o_type);
@@ -267,8 +267,8 @@ static const char *parseInputLink(char *link, char **deviceName, uint32_t *objTy
 
 /** AI Suppoort...*/
 static long init_ai(aiRecord *rec) {
-	printf("\n\tInit_AI...\n");
-	printf("\n\t%s\n", rec->inp.value.instio.string);
+	//printf("\n\tInit_AI...\n");
+	//printf("\n\t%s\n", rec->inp.value.instio.string);
 
 	char *deviceName = 0;
 	uint32_t objType = 0;
@@ -280,13 +280,12 @@ static long init_ai(aiRecord *rec) {
 
 	const char *error = parseInputLink(rec->inp.value.instio.string, &deviceName, &objType, &objInstance, &propertyId, &objectArrayIndex, &write_priority,
 			&cov);
-	printf("\n\terror: %s\n", error);
+	if (error)
+        printf("\n\terror: %s\n", error);
 
 	BacNetDevice *device = DrvBacNet::findBacNetDeviceByName(deviceName);
 
-	if(device)
-		printf("\n\tYo! I found this device: %s\n", device->getName());
-	else {
+	if (!device) {
 		fprintf (stderr, "\n\"%s\" is not found in the device-list, check st.cmd\n", deviceName);
 		fprintf(stderr,"\nThis is my list:\n");
 		DrvBacNet::listBacNetDeviceInfo(5);
@@ -295,9 +294,9 @@ static long init_ai(aiRecord *rec) {
 
 	free(deviceName);
 
-	if(cov)
-		printf("\nWe Have COV: %u\n", cov->getLife_time());
-	printf("\n%p\n", cov);
+	//if(cov)
+		//printf("\nWe Have COV: %u\n", cov->getLife_time());
+	//printf("\n%p\n", cov);
 	BacNetVariable *var = new BacNetVariableDouble(objType, objInstance, propertyId, objectArrayIndex, 0, cov);
 	device->addBacNetVariable(var);
 	// Remember variable in 'device private'
@@ -331,8 +330,8 @@ static long read_ai(aiRecord *rec) {
 
 /** BI Suppoort...*/
 static long init_bi(biRecord *rec) {
-	printf("\n\tInit_BI...\n");
-	printf("\n\t%s\n", rec->inp.value.instio.string);
+	//printf("\n\tInit_BI...\n");
+	//printf("\n\t%s\n", rec->inp.value.instio.string);
 
 	char *deviceName = 0;
 	uint32_t objType = 0;
@@ -344,12 +343,11 @@ static long init_bi(biRecord *rec) {
 
 	const char *error = parseInputLink(rec->inp.value.instio.string, &deviceName, &objType, &objInstance, &propertyId, &objectArrayIndex, &write_priority,
 			&cov);
-	printf("\n\terror: %s\n", error);
+	if (error)
+        printf("\n\terror: %s\n", error);
 
 	BacNetDevice *device = DrvBacNet::findBacNetDeviceByName(deviceName);
-	if(device)
-		printf("\n\tYo! I found this device: %s\n", device->getName());
-	else {
+	if (!device) {
 		fprintf (stderr, "\n\"%s\" is not found in the device-list, check st.cmd\n", deviceName);
 		fprintf(stderr,"\nThis is my list:\n");
 		DrvBacNet::listBacNetDeviceInfo(5);
@@ -358,9 +356,9 @@ static long init_bi(biRecord *rec) {
 
 	free(deviceName);
 
-	if(cov)
-		printf("\nWe Have COV: %u\n", cov->getLife_time());
-	printf("\n%p\n", cov);
+	//if(cov)
+	//	printf("\nWe Have COV: %u\n", cov->getLife_time());
+	//printf("\n%p\n", cov);
 
 	BacNetVariable *var = new BacNetVariableDigital(objType, objInstance, propertyId, objectArrayIndex, 0, cov);
 	device->addBacNetVariable(var);
@@ -395,8 +393,8 @@ static long read_bi(biRecord *rec) {
 
 /** MBBI Suppoort...*/
 static long init_mbbi(mbbiRecord *rec) {
-	printf("\n\tInit_MBBI...\n");
-	printf("\n\t%s\n", rec->inp.value.instio.string);
+	//printf("\n\tInit_MBBI...\n");
+	//printf("\n\t%s\n", rec->inp.value.instio.string);
 
 	char *deviceName = 0;
 	uint32_t objType = 0;
@@ -408,13 +406,12 @@ static long init_mbbi(mbbiRecord *rec) {
 
 	const char *error = parseInputLink(rec->inp.value.instio.string, &deviceName, &objType, &objInstance, &propertyId, &objectArrayIndex, &write_priority,
 			&cov);
-	printf("\n\terror: %s\n", error);
+	if (error)
+        printf("\n\terror: %s\n", error);
 
 	BacNetDevice *device = DrvBacNet::findBacNetDeviceByName(deviceName);
 
-	if(device)
-		printf("\n\tYo! I found this device: %s\n", device->getName());
-	else {
+	if (!device) {
 		fprintf (stderr, "\n\"%s\" is not found in the device-list, check st.cmd\n", deviceName);
 		fprintf(stderr,"\nThis is my list:\n");
 		DrvBacNet::listBacNetDeviceInfo(5);
@@ -457,8 +454,8 @@ static long read_mbbi(mbbiRecord *rec) {
 /** AO support...*/
 static long init_ao(aoRecord *rec)
 {
-	printf("\n\tInit_AO...\n");
-	printf("\n\t%s\n", rec->out.value.instio.string);
+	//printf("\n\tInit_AO...\n");
+	//printf("\n\t%s\n", rec->out.value.instio.string);
 
 	char *deviceName = 0;
 	uint32_t objType = 0;
@@ -470,13 +467,12 @@ static long init_ao(aoRecord *rec)
 
 	const char *error = parseInputLink(rec->out.value.instio.string, &deviceName, &objType, &objInstance, &propertyId, &objectArrayIndex, &priority,
 			&cov);
-	printf("\n\terror: %s\n", error);
+	if (error)
+        printf("\n\terror: %s\n", error);
 
 	BacNetDevice *device = DrvBacNet::findBacNetDeviceByName(deviceName);
 
-	if(device)
-		printf("\n\tYo! I found this device: %s\n", device->getName());
-	else {
+	if (!device) {
 		fprintf (stderr, "\n\"%s\" is not found in the device-list, check st.cmd\n", deviceName);
 		fprintf(stderr,"\nThis is my list:\n");
 		DrvBacNet::listBacNetDeviceInfo(5);
@@ -512,8 +508,8 @@ static long write_ao(aoRecord *rec)
 /** BO support...*/
 static long init_bo(boRecord *rec)
 {
-	printf("\n\tInit_BO...\n");
-	printf("\n\t%s\n", rec->out.value.instio.string);
+	//printf("\n\tInit_BO...\n");
+	//printf("\n\t%s\n", rec->out.value.instio.string);
 
 	char *deviceName = 0;
 	uint32_t objType = 0;
@@ -525,13 +521,12 @@ static long init_bo(boRecord *rec)
 
 	const char *error = parseInputLink(rec->out.value.instio.string, &deviceName, &objType, &objInstance, &propertyId, &objectArrayIndex, &priority,
 			&cov);
-	printf("\n\terror: %s\n", error);
+	if (error)
+        printf("\n\terror: %s\n", error);
 
 	BacNetDevice *device = DrvBacNet::findBacNetDeviceByName(deviceName);
 
-	if(device)
-		printf("\n\tYo! I found this device: %s\n", device->getName());
-	else {
+	if (!device) {
 		fprintf (stderr, "\n\"%s\" is not found in the device-list, check st.cmd\n", deviceName);
 		fprintf(stderr,"\nThis is my list:\n");
 		DrvBacNet::listBacNetDeviceInfo(5);
@@ -566,8 +561,8 @@ static long write_bo(boRecord *rec)
 
 static long init_stringin(stringinRecord *rec)
 {
-	printf("\n\tInit_STRING_IN...\n");
-	printf("\n\t%s\n", rec->inp.value.instio.string);
+	//printf("\n\tInit_STRING_IN...\n");
+	//printf("\n\t%s\n", rec->inp.value.instio.string);
 
 	char *deviceName = 0;
 	uint32_t objType = 0;
@@ -579,13 +574,12 @@ static long init_stringin(stringinRecord *rec)
 
 	const char *error = parseInputLink(rec->inp.value.instio.string, &deviceName, &objType, &objInstance, &propertyId, &objectArrayIndex, &priority,
 			&cov);
-	printf("\n\terror: %s\n", error);
+	if (error)
+        printf("\n\terror: %s\n", error);
 
 	BacNetDevice *device = DrvBacNet::findBacNetDeviceByName(deviceName);
 
-	if(device)
-		printf("\n\tYo! I found this device: %s\n", device->getName());
-	else {
+	if (!device) {
 		fprintf (stderr, "\n\"%s\" is not found in the device-list, check st.cmd\n", deviceName);
 		fprintf(stderr,"\nThis is my list:\n");
 		DrvBacNet::listBacNetDeviceInfo(5);
