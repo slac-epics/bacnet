@@ -323,8 +323,10 @@ bool BacNetVariable::process(class BacNetConnection *con, class BacNetDevice *de
 			if(verbosity_level_3(verbosity_level))
 				buffer->hexdump(buffer->getPointerToBuffer(), buffer->getLength());
 
-			//int rv = con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
-			//printf("rv=%d", rv);
+			int rv = con->sendTo(dev, buffer->getPointerToBuffer(), buffer->getLength(), UNICAST);
+			if (verbosity_level_2(verbosity_level)) {
+			    printf("rv=%d", rv);
+            }
 		}
 	}
 	else {
